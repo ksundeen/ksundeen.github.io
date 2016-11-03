@@ -1,0 +1,19 @@
+#carousel-slide {
+    color: black;
+}
+
+* {
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+.show-on-hover:hover > ul.dropdown-menu {
+ display: block;  
+ }
+ 
+body {
+ background-color: #c2d1f0;
+ }
+ 
+.diffcolor {
+ color: black;
+ }
