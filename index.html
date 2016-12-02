@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" manifest="kimsundeen.appcache">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Kim Sundeen's web portfolio. Contains maps and apps created by Kim along with her resume and contact information."><meta name="author" content="Kim Sundeen"><meta name="keywords" content="Kim, GIS, GIS programmer, GIS analyst, cartographer">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Kim Sundeen's web portfolio. Contains maps and apps created by Kim along with her resume and contact information."><meta name="author" content="Kim Sundeen"><meta name="keywords" content="Kim, GIS, GIS programmer, GIS analyst, Cartographer">
 	<title>Maps-on-the-Mind</title>
 	<!-- Bootstrap --><!-- Latest compiled and minified CSS --><!---- to test locally, change "//maxcdn..." to "http://maxcdn..." to access the http protocol------>
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script><script type="text/javascript" src="lib/animate.js"></script><script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
@@ -39,7 +39,11 @@
 <div class="container"><!-- Static navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container-fluid">
-<div class="navbar-header"><button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href="aboutme.html">Kim Sundeen</a></div>
+<div class="navbar-header">
+    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span></button>
+        <a class="navbar-brand" href="aboutme.html">Kim Sundeen</a>
+</div>
 
 <div class="navbar-collapse collapse">
 <ul class="nav navbar-nav">
@@ -62,90 +66,104 @@
 
 <div class="container" style="padding-top: 15px;">
 <div class="page-header">
-<h1>Maps-on-the-Mind <small>from one geo-geek to another</small></h1>
+<h1><span class="shadow">Maps-on-the-Mind </span><small>from one geo-geek to another</small></h1>
 </div>
 
 <blockquote class="pull-left">The beginning is&nbsp;the most important part of the work. <small> - Plato</small></blockquote>
 </div>
-<!--/ Header container --><!-- Carousel -->
+<!--/ Header container -->
 
-<div class="container">&nbsp;
-<div class="carousel slide" data-ride="carousel" id="carousel-slide"><!-- Indicators -->
-<ol class="carousel-indicators">
-	<li class="active" data-slide-to="0" data-target="#carousel-slide"></li>
-	<li data-slide-to="1" data-target="#carousel-slide"></li>
-	<li data-slide-to="2" data-target="#carousel-slide"></li>
-	<li data-slide-to="3" data-target="#carousel-slide"></li>
-	<li data-slide-to="4" data-target="#carousel-slide"></li>
-</ol>
-<!-- Wrapper for slides -->
+<!-- Carousel -->
 
-<div class="carousel-inner"><!-- Carousel 1 -->
-<div class="item active">
-<div align="center"><img alt="Slide 1" src="assets/images/carousel-pythonscript.png" />
-<div class="carousel-caption">
-<h1>GIS Programming &amp; Analysis</h1>
+<div class="container">
+    <div class="carousel slide" data-ride="carousel" id="carousel-slide"><!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li class="active" data-slide-to="0" data-target="#carousel-slide"></li>
+        <li data-slide-to="1" data-target="#carousel-slide"></li>
+        <li data-slide-to="2" data-target="#carousel-slide"></li>
+        <li data-slide-to="3" data-target="#carousel-slide"></li>
+        <li data-slide-to="4" data-target="#carousel-slide"></li>
+    </ol>
+    <!-- Wrapper for slides -->
 
-<p>Bringing the power of GIS to the user.</p>
+    <div class="carousel-inner">
+    <!-- Carousel 1 -->
+    <div class="item active">
+    <div align="center"><img alt="Slide 1" src="assets/images/carousel-pythonscript.png" />
+    <div class="carousel-caption">
+    <h1 class="shadow">GIS Programming &amp; Analysis</h1>
 
-<p><a class="btn btn-primary btn-lg" href="https://github.com/ksundeen" role="button" target="_blank">Browse GitHub Site</a></p>
-</div>
-</div>
-</div>
-<!-- Carousel 2 -->
+    <h3 class="shadow">Bringing the power of GIS to the user.</h3>
 
-<div class="item" id="carousel-center">
-<div align="center"><img alt="Slide 2" id="test-img" src="assets/images/carousel-penokeemine.png" />
-<div class="carousel-caption">
-<h1>Cartography &amp; Design</h1>
+    <p><a class="btn btn-primary btn-lg" href="https://github.com/ksundeen" role="button" target="_blank">Browse GitHub Site</a></p>
+    </div>
+    </div>
+    </div>
+    <!-- Carousel 2 -->
 
-<p>Visualizing Data through Art and Design.</p>
+    <div class="item" id="carousel-center">
+    <div align="center"><img alt="Slide 2" id="test-img" src="assets/images/carousel-penokeemine.png" />
+    <div class="carousel-caption">
+    <h1 class="shadow">Cartography &amp; Design</h1>
 
-<p><a class="btn btn-primary btn-lg" href="assets/maps/penokeemine.jpg" role="button">View the Poster</a></p>
-</div>
-</div>
-</div>
-<!-- Carousel 3 -->
+    <h3 class="shadow">Visualizing Data through Art and Design.</h3>
 
-<div class="item">
-<div align="center"><img alt="Slide 3" src="assets/images/carousel-webmap.png" />
-<div class="carousel-caption">
-<h1 class="diffcolor">Web Map Programming</h1>
+    <p><a class="btn btn-primary btn-lg" href="assets/maps/penokeemine.jpg" role="button">View the Poster</a></p>
+    </div>
+    </div>
+    </div>
+    <!-- Carousel 3 -->
 
-<p class="diffcolor">Web-enabling GIS Tools &amp; Analytics to Access Your Data.</p>
+    <div class="item">
+    <div align="center"><img alt="Slide 3" src="assets/images/carousel-megaman.png" />
+    <div class="carousel-caption">
+    <h1 class="shadow">Custom Web Map Programming</h1>
 
-<p><a class="btn btn-primary btn-lg" href="gallery.html" role="button">Browse Gallery</a></p>
-</div>
-</div>
-</div>
-<!-- Carousel 4 -->
+    <h3 class="shadow">Web-enabling GIS Tools &amp; Analytics to Access Your Data.</h3>
 
-<div class="item">
-<div align="center"><img alt="Slide 4" src="assets/images/images/carousel-databasemanagement.png" />
-<div class="carousel-caption">
-<h1 class="diffcolor">Data Management</h1>
+    <p><a class="btn btn-primary btn-lg" href="gallery.html" role="button">Browse Gallery</a></p>
+    </div>
+    </div>
+    </div>
+    <!-- Carousel 4 -->
 
-<p class="diffcolor">Taking Big Data and Organizing the Structure for Simple Access.</p>
-</div>
-</div>
-</div>
-<!-- Carousel 5 -->
+    <div class="item">
+    <div align="center"><img alt="Slide 4" src="assets/images/carousel-databasemanagement.png" />
+    <div class="carousel-caption">
+    <h1 class="diffcolor">Data Management</h1>
 
-<div class="item">
-<div align="center"><img alt="parachuting picture" src="assets/images/carousel-parachuting_crop.jpg" />
-<div class="carousel-caption">
-<h1>Meet Kim!</h1>
+    <h3 class="diffcolor">Taking Big Data and Organizing the Structure for Simple Access.</h3>
+    </div>
+    </div>
+    </div>
+    <!-- Carousel 5 -->
 
-<p>I&#39;m a self-proclaimed geo-geek looking for challenging and interesting GIS programming projects.</p>
+    <div class="item">
+    <div align="center"><img alt="parachuting picture" src="assets/images/carousel-parachuting_crop.jpg" />
+    <div class="carousel-caption">
+    <h1 class="shadow">Meet Kim!</h1>
 
-<p><a class="btn btn-primary btn-lg" href="aboutme.html" role="button">Read More</a></p>
+    <h3>I&#39;m a self-proclaimed geo-geek looking for challenging and interesting GIS programming projects.</h3>
+
+    <p><a class="btn btn-primary btn-lg" href="aboutme.html" role="button">Read More</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+<!-- end container -->
+<!-- Left & right Controls -->
+  <a class="left carousel-control" href="#carousel-slide" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-slide" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    </div>
 </div>
-</div>
-</div>
-</div>
-<!-- end container --><!-- Controls --></div>
-</div>
-<!-- end carousel container --><!-- End Carousel -->
+<!-- end carousel container -->
+<!-- End Carousel -->
 
 <hr />
 <p></p>

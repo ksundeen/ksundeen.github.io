@@ -14,10 +14,18 @@ body {
  background-color: #c2d1f0;
  }
  
+.shadow {
+ text-shadow: black 0.1em 0.1em 0.2em;
+ font-weight: bold; 
+}
+
 .diffcolor {
  color: black;
+ text-shadow: black 0.1em 0.1em 0.2em;
+ font-weight: bold;
  }
 
 h2 {
  padding-top: 2cm;
 }
+
