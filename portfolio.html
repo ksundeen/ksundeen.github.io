@@ -1,522 +1,475 @@
 <!DOCTYPE html>
 <html lang="en" manifest="kimsundeen.appcache">
-    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Kim Sundeen's web portfolio. Contains maps and apps created by Kim along with her resume and contact information."><meta name="author" content="Kim Sundeen"><meta name="keywords" content="Kim, GIS, GIS programmer, GIS analyst, Cartographer">
-	   <title>Maps-on-the-Mind</title>
-	
-    <!-- Bootstrap --><!-- Latest compiled and minified CSS --><!---- to test locally, change "//maxcdn..." to "http://maxcdn..." to access the http protocol------>
-	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script type="text/javascript" src="js/form.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/scrollspy.js"></script><script>
-      $( document ).ready(function() {
-      $('body').scrollspy({
-      target: '.bs-docs-sidebar',
-      offset: 0
-      });
-      });
-	  </script>
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-    <!-- My css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css"> 
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-        
-    <!-- Google Analytics -->
-      <script>
-         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-         
-         ga('create', 'UA-73075550-1', 'auto');
-         ga('send', 'pageview');
-         
-      </script>
-        
-</head>
-<body><!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQNGQQ"
-         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-         '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-         })(window,document,'script','dataLayer','GTM-PQNGQQ');
-      </script><!-- End Google Tag Manager -->
-     
-     <div class="container">
-         <!-- Static navbar -->
-         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
-               <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="aboutme.html">Kim Sundeen</a>
-               </div>
-               <div class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav">
-                     <li><a href="index.html">Home</a></li>
-                     <li><a href="aboutme.html">About Me</a></li>
-                     <li><a data-toggle="modal" href="#modal-form">Contact Me</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
-                        <ul class="active dropdown-menu">
-                           <li><a href="assets/resume/sundeen_resume.pdf" target="_blank">PDF Resume</a></li>
-                           <li><a href="portfolio.html">Curriculum Vitae</a></li>
-                           <li><a href="gallery.html">Gallery</a></li>
+    <head>
+        <
+        meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Kim Sundeen's web portfolio. Contains maps and apps created by Kim along with her resume and contact information.">
+        <meta name="author" content="Kim Sundeen">
+        <meta name="keywords" content="Kim, GIS, GIS programmer, GIS analyst, Cartographer">
+        <title>Maps-on-the-Mind</title>
+        <!-- Bootstrap --><!-- Latest compiled and minified CSS -->
+        <!---- to test locally, change "//maxcdn..." to "http://maxcdn..." to access the http protocol------>
+        <!--put your Bootstrap stylesheet links below this comment and above style.css-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/stylebasic.css">
+        <!-- My css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!--<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />-->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-73075550-1', 'auto');
+            ga('send', 'pageview');
+            
+        </script>        
+    </head>
+    <body>
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQNGQQ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PQNGQQ');
+        </script><!-- End Google Tag Manager -->
+        <div class="container">
+            <!-- Static navbar -->
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="aboutme.html">Kim Sundeen</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="aboutme.html">About Me</a></li>
+                            <li><a data-toggle="modal" href="#modal-form">Contact Me</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                                <ul class="active dropdown-menu">
+                                    <li><a href="assets/resume/sundeen_resume.pdf" target="_blank">PDF Resume</a></li>
+                                    <li><a href="portfolio.html">Curriculum Vitae</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                     </li>
-                  </ul>
-               </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
-         </div><!--/ static navbar -->
-      </div><!-- /container -->
-    
-    
-<!-- /top container -->
-
-<div data-spy="scroll" data-target=".bs-docs-sidebar">
-<div class="container">
-<article id="article-middle" role="main" style="padding-top: 50px;">
-<div class="about container">
-<div class="module module-article"><!--/ row contains all cv lists -->
-<div class="row"><!--Nav Bar Sidebar-->
-<nav class="col-xs-3 bs-docs-sidebar hidden-xs hidden-sm" id="scroll_navBar" role="navigation"><!-- <ul id="sidebar" class="nav nav-stacked fixed">	-->
-<ul class="nav nav-list affix" id="sidebar">
-	<li><a href="#education">Education</a></li>
-	<li><a href="#experience">Experience</a></li>
-	<li><a href="#tech">Technical Skills</a></li>
-	<li><a href="#media">Publications</a></li>
-	<li><a href="#activity">Activities &amp; Achievements</a></li>
-</ul>
-</nav>
-
-<div class="row col-md-9" style="padding-top: 10px;">
-<div class=".col-md-8">
-<section id="overview">
-<div class="page-header">
-<h1>Curriculum Vitae |<small> and all the fine details</small></h1>
-</div>
-</section>
-
-<section id="education">
-<h2>Education</h2>
-
-<hr />
-<p class="pull-right"><strong>Anticipated Graduation: Summer, 2018</strong></p>
-
-<p><strong>Professional Master of Science: Geographic Information Systems &amp; Web Map Programming</strong></p>
-
-<ul>
-	<li>University of Wisconsin-Madison</li>
-	<li>Research Interests: Electric Utility Analytics, Field Force Automation, Real-time Web Cartography</li>
-</ul>
-&nbsp;
-
-<p class="pull-right"></p>
-
-<p class="pull-right"><strong>2012</strong></p>
-
-<p><strong>Graduate Certificate in GIS</strong></p>
-
-<ul>
-	<li>University of Wisconsin-Madison</li>
-	<li>Thesis: <a href="assets/researchpapers/PredictingHgConcInGreatLakes_KimNessSundeen.pdf" target="_blank">A Remote Sensing Approach to Predicting Mercury Concentration in the Great Lakes Region using Leaf Area Index.</a></li>
-	<li>Research Interests: Interactive Cartography, Geostatistics, GeoComputing, Hyrdrologic Spatial Modeling, Remote Sensing</li>
-</ul>
-&nbsp;
-
-<p class="pull-right"><strong>2011</strong></p>
-
-<p><strong>Master of Science: Conservation Biology and Sustainable Development</strong></p>
-
-<ul>
-	<li>University of Wisconsin-Madison</li>
-	<li>Thesis: <a href="assets/researchpapers/ness-sundeen_ms_thesis.pdf" target="_blank">Using Abrupt Flight Reactions as Indicators of Power Line Risk for Greater Sandhill Cranes (Grus Canadensis Tabida) across Two South-Central Wisconsin Landscapes.</a></li>
-	<li>Research Interests: Wildlife Biology, Species Distribution Predictive Modelling &amp; Mapping, Geostatistics, GeoComputing with R</li>
-</ul>
-&nbsp;
-
-<p class="pull-right"><strong>2006</strong></p>
-
-<p><strong>Bachelor of Science: Wildlife Ecology</strong></p>
-
-<ul>
-	<li>University of Wisconsin-Madison</li>
-	<li>Minor in Environmental Studies</li>
-</ul>
-</section>
-<!--======== Experience =========-->
-<section id="experience">
-<h2>Experience</h2>
-
-<hr />
-<p class="pull-right"><strong>2016&nbsp;- Current</strong></p>
-
-<p><strong>GIS Programmer Analyst</strong></p>
-
-<p><strong><a href="http://www.mnpower.com/">GIS &amp; Facility Operations, MN Power</a>, Duluth, MN</strong></p>
-
-<ul>
-	<li>GIS Administrator
-	<ul>
-		<li>Database Management | <small><i>Recommend new data structures for improved access &amp; organization (ArcGIS SDE, Postgresql)</i></small></li>
-		<li>Manage Distributed Data | <small> <i>Replication, synchronization, versioning</i></small></li>
-		<li>Technical &amp; Administrative Support | <small><i>Develop training materials &amp; process documentation for web applications for staff&nbsp;</i></small></li>
-	</ul>
-	</li>
-	<li>Web Developer
-	<ul>
-		<li>Coordinate Agile Scrum Methodology meetings&nbsp;to Identify Mapping&nbsp;Solutions | <small> <i>To interactively idetnify mapping application requirements with users</i></small></li>
-		<li>Develop &amp; publish GIS services for public &amp; utilities-specific applications, &amp; ArcGIS Online Data Portals</li>
-	</ul>
-	</li>
-	<li>GIS Developer
-	<ul>
-		<li>Coordinated Full Life-Cycle Software Development | <small><i>For mapping web data-entry applications using Python &amp; ArcGIS Online</i></small></li>
-		<li>Cartography | <small> <i>Create map books, posters, &amp; other digital maps for field data collection by staff</i></small></li>
-		<li>Python Development | <small><i>Develop automation routines to reduce need for manual map production</i></small></li>
-		<li>Mobile Maps Developer| <small><i>Configured &amp; developed new mapping systems for mobile data collection using Survey123 &amp;&nbsp;ArcGIS for Collector</i></small></li>
-	</ul>
-	</li>
-</ul>
-&nbsp; <!------------------------------------------------------------------------------------------>
-
-<p class="pull-right"></p>
-
-<p class="pull-right"><strong>2015 - 2016</strong></p>
-
-<p><strong>GIS Specialist</strong></p>
-
-<p><strong><a href="http://www.duluthmn.gov/" target="_blank">Engineering Division, Public Works &amp; Utilities Dept., City of Duluth</a>, Duluth, MN</strong></p>
-
-<ul>
-	<li>GIS Administrator
-	<ul>
-		<li>Implemented a GIS User Needs Assessment | <small><i><a href="http://slides.com/khsundeen/deck" target="_blank">Presentation</a> | <a href="https://drive.google.com/folderview?id=0B5a21zG7vPqRMXZiWDZMZ3JJYlU&amp;usp=sharing" target="_blank">Download materials</a></i></small></li>
-		<li>Database Management | <small><i>Recommend new data structures for improved access &amp; organization (ArcGIS SDE, Postgresql)</i></small></li>
-		<li>Database Administrator | <small> <i>ArcGIS SDE &amp; Microsoft SQL Server</i></small></li>
-		<li>Manage Distributed Data | <small> <i>Replication, synchronization, versioning</i></small></li>
-		<li>Technical &amp; Administrative Support | <small><i>Develop training for data entry &amp; map use by GIS users</i></small></li>
-	</ul>
-	</li>
-	<li>Web Developer
-	<ul>
-		<li>IT Administrator | <small> <i>Coordinated with IT Dept. to upgrade ArcGIS for Server to upgrade GIS system infrastructure</i></small></li>
-		<li>Coordinate IT meetings to Identify Solutions | <small> <i>To improve City GIS infrastructure for implementing new webmap applications</i></small></li>
-		<li>Develop &amp; publish GIS services for public &amp; utilities-specific applications, &amp; ArcGIS Online Data Portals</li>
-	</ul>
-	</li>
-	<li>GIS Developer
-	<ul>
-		<li>Coordinated Full Life-Cycle Software Development | <small><i>For mapping web data-entry applications using Python &amp; ArcGIS Online</i></small></li>
-		<li>ArcGIS Server Manager | <small><i>Web Services with Security </i></small></li>
-		<li>Cartography | <small> <i>Create map books, posters, &amp; other digital maps for City Council meetings, reports, research, &amp; public alerts</i></small></li>
-		<li>Python Development | <small><i>Develop GIS data access tools &amp; Python application development for automation</i></small></li>
-		<li>GPS Data Manager | <small><i>Configured &amp; developed new systems for GPS mobile data collection</i></small></li>
-	</ul>
-	</li>
-</ul>
-&nbsp; <!------------------------------------------------------------------------------------------>
-
-<p class="pull-right"></p>
-
-<p class="pull-right"><strong>2012 - 2015</strong></p>
-
-<p><strong>GIS Specialist</strong></p>
-
-<p><strong><a href="http://www.badriver-nsn.gov/tribal-operations/natural-resources/gis-maps/" target="_blank">Bad River Band of the Lake Superior Chippewa Tribe</a>, Odanah, WI</strong></p>
-
-<ul>
-	<li>GIS Administrator
-	<ul>
-		<li>GIS Data Manager | <small><i>Improved on reservation-wide GIS ownership, transportation, &amp; hydrology infrastructure; Migrated existing data to consolidated data structure</i></small></li>
-		<li>Database Manager | <small><i>Configured &amp; managed GIS databases including ArcGIS for Server 10.x, ArcSDE, Microsoft SQL Server, and Postgresql</i></small></li>
-		<li>Managed ArcGIS fpr Server | <small><i>Published &amp; managed web services with security</i></small></li>
-		<li>Provided technical support | <small><i>Trained &amp; supported GIS Users</i></small></li>
-	</ul>
-	</li>
-	<li>Web Developer
-	<ul>
-		<li>Streamlined digital government services online| <small><i>Made services more usable &amp; accessible through the website</i></small></li>
-		<li>Web-Database Manager | <small><i>Managed grants for implementing database-enabled webmapping applications for web-entry through the website</i></small></li>
-		<li>Updated Bad River Website | <small><i>Coordinated website update design &amp; end-user training with IT Director</i></small></li>
-	</ul>
-	</li>
-	<li>GIS Developer
-	<ul>
-		<li>GIS Application Development | <small><i>Created public facing &amp; internal GIS mobile-ready data collection: Developed &amp; published GIS services for natural resources, hydrology, ownership, &amp; transportation through Google Maps API, Esri Javascript API, ArcGIS Online, &amp; GeoMoose</i></small></li>
-		<li>Cartography | <small><i>Created large poster, digital, &amp; map books of tribal-specific research &amp; public information</i></small></li>
-		<li>Python Development | <small><i>Automated GIS modeling, analysis, mapping &amp; tasks with Python</i></small></li>
-		<li>GPS Data Manager | <small><i>Configured &amp; developed new systems for GPS mobile data collection</i></small></li>
-	</ul>
-	</li>
-</ul>
-
-<p><span style="color:#696969;">&nbsp; *</span><em><span style="color:#696969;">I developed the webpage and all web applications on their current</span><span style="color:#FF0000;"> </span><strong><a href="http://www.badriver-nsn.gov/tribal-operations/natural-resources/gis-maps/webmaps"><span style="color:#FF0000;">GIS webpage</span></a></strong></em></p>
-&nbsp;
-
-<p></p>
-
-<p class="pull-right"><strong>2010 - 2012</strong></p>
-
-<p><strong>GIS Project Assistant</strong></p>
-
-<p><strong><a href="http://son.wisc.edu/" target="_blank">UW-Madison School of Nursing</a>, Madison, WI</strong></p>
-
-<ul>
-	<li>Developed Python algorithms to compare water quality interpolated data related to how map readers perceived their water quality risk</li>
-	<li>Reviewed &amp; published research articles for publication into public health &amp; risk mapping journals | <small><a href="http://arrow.monash.edu.au/vital/access/manager/Repository/monash:128304" target="_blank"><i>Accuracy of residents&#39; perceived home locations on an environmental risk map. (2014)</i></a></small></li>
-	<li>Documented methods for repeating and improving GIS analysis, python programs, and georeferencing routines</li>
-	<li>Trained student employees on GIS data entry and georeferencing standards</li>
-</ul>
-&nbsp;
-
-<p class="pull-right"><strong>2012</strong></p>
-
-<p><strong>Web/GIS Technician</strong></p>
-
-<p><strong><a href="http://www.sco.wisc.edu/" target="_blank">Wisconsin State Cartographer&#39;s Office</a></strong></p>
-
-<ul>
-	<li>Customized Python scripts &amp; ArcGIS add-ins to create natural basemaps of WI &amp; updating the Cartographer&rsquo;s website</li>
-	<li>Developed updated Wisconsin terrain basemaps</li>
-	<li>Created small file geodatabases for storing GIS data used in maps</li>
-	<li>Updated content on State Cartographer&rsquo;s website</li>
-</ul>
-&nbsp;
-
-<p class="pull-right"><strong>2012</strong></p>
-
-<p><strong>Senior Natural Resources Research Scientist</strong></p>
-
-<p><strong><a href="http://dnr.wi.gov/" target="_blank">Wisconsin Department of Natural Resources, Bureau of Science Services</a></strong></p>
-
-<ul>
-	<li>Analyzed &amp; organized water quality data for input into linear regression models using Python, ArcGIS tools, &amp; opensource GIS &amp; mapping tools</li>
-	<li>Created digital maps of soil conservation areas &amp; runoff for publications</li>
-	<li>Created &amp; updated user guides for running mapping linear regression online tools</li>
-	<li>Created maps &amp; reviewed research articles for publication on environmental assessment tools | <small><a href="http://dnr.wi.gov/files/PDF/pubs/ss/SS1142.pdf" target="_blank"><i>Expanded Beach &ldquo;Nowcast&rdquo; Modeling across Wisconsin. (2014)</i></a></small></li>
-</ul>
-&nbsp;
-
-<p class="pull-right"><strong>2011 - 2012</strong></p>
-
-<p><strong>Biologist/GIS Technician</strong></p>
-
-<p><strong><a href="http://wi.water.usgs.gov/" target="_blank">US Geological Survey</a></strong></p>
-
-<ul>
-	<li>Entered &amp; evaluated data in one of the largest vector spatial SQL Server databases with the USFWS&rsquo; National Wetlands Inventory | <small><a href="http://www.fws.gov/wetlands/Data/Mapper.html" target="_blank"><i>US Fish &amp; Wildlife Service - National Wetlands Inventory Wetlands Mapper (2014)</i></a></small></li>
-	<li>Review existing wetlands data &amp; followed QA &amp; QC standard operating procedures for ensuring correct data</li>
-	<li>Converted raster mylar wetlands inventories into vector systems of wetlands datasets using ArcGIS tools</li>
-	<li>Used remotely-sensed imagery to assess wetland vegetation</li>
-</ul>
-<br />
-</section>
-
-<p class="pull-right"><a href="#top">Back to top</a></p>
-
-<section id="tech">
-<!--======== Technical Skills =========-->
-<h2>Technical Skills</h2>
-
-<hr />
-<p><strong>Mapping Technologies: </strong></p>
-
-<ul>
-	<li>ESRI ArcPro 1.4,&nbsp;ArcGIS 9.X-10.X, ArcGIS Server 10.x, ArcGIS Online, Google Earth, Open source GIS (QGIS, GDAL, OGR, MapServer)</li>
-</ul>
-
-<p><strong>GPS Technologies: </strong></p>
-
-<ul>
-	<li>ESRI ArcPad 7.x-10.x, Terrasync 5.6, Pathfinder Office 5.4</li>
-</ul>
-
-<p><strong>Server-Side & Web Development: </strong></p>
-
-<ul>
-	<li>Python, SQL, HTML5, CSS3, JavaScript, PHP, jQuery, Bootstrap, Dreamweaver, Firebug, Google Analytics&nbsp;</li>
-</ul>
-
-<p><strong>Coding Version Control: </strong></p>
-
-<ul>
-	<li>GitHub, TortoiseSVN</li>
-</ul>
-
-<p><strong>Mapping API Development: </strong></p>
-
-<ul>
-	<li>ArcGIS for JavaScript, Leaflet, Mapbox, Google Maps, OpenLayers</li>
-</ul>
-
-<p><strong>Graphics Software: </strong></p>
-
-<ul>
-	<li>Adobe Illustrator, Adobe Photoshop</li>
-</ul>
-
-<p><strong>Database Technologies: </strong></p>
-
-<ul>
-	<li>Microsoft SQL Server, 12c Oracle, PostgreSQL (PostGIS), MySQL, MS Access, Excel, CSV</li>
-</ul>
-
-<p><strong>Professional Licenses: </strong></p>
-
-<ul>
-	<li>Certified Geographic Information Systems Professional, GISP #84940</li>
-</ul>
-</section>
-
-<p class="pull-right"><a href="#top">Back to top</a></p>
-<!--============= MEDIA ===============-->
-    
-<section id="media">
-<h2>Publications</h2>
-
-<hr />
-    <p><strong>Research Papers</strong></p>
-    <ul>
-        <li>GIS Certificate Thesis: <a href="assets/researchpapers/PredictingHgConcInGreatLakes_KimNessSundeen.pdf" target="_blank">A Remote Sensing Approach to Predicting Mercury Concentration in the Great Lakes Region using Leaf Area Index.</a></li>
-        <li>MS Thesis: <a href="assets/researchpapers/ness-sundeen_ms_thesis.pdf" target="_blank">Using Abrupt Flight Reactions as Indicators of Power Line Risk for Greater Sandhill Cranes (Grus Canadensis Tabida) across Two South-Central Wisconsin Landscapes.</a></li>
-        <li><a href="http://arrow.monash.edu.au/vital/access/manager/Repository/monash:128304" target="_blank">Accuracy of residents&#39; perceived home locations on an environmental risk map. (2014)</a></li>
-        <li><a href="http://dnr.wi.gov/files/PDF/pubs/ss/SS1142.pdf" target="_blank">Expanded Beach &ldquo;Nowcast&rdquo; Modeling across Wisconsin. (2014)</a></li>
-    </ul>
-    <p><strong>Collaborative Programming & Code Repositories: </strong></p>
-    <ul>
-        <li>GitHub | <a href="https://github.com/ksundeen" target="blank">Github.com/ksundeen</a></li>
-        <li>Stack Exchange | <a href="http://gis.stackexchange.com/users/48566/fynnster" target="blank">Gis.stackexchange.com/users/48566/fynnster</a></li>
-        <li>Esri's GeoNet | <a href="https://geonet.esri.com/people/ksundeen_mnpower">Geonet.esri.com/people/ksundeen_mnpower</a></li>           
-        </ul>
-    </ul>
-    </section>
-
-<p class="pull-right"><a href="#top">Back to top</a></p>
-
-<!--============= Activities & Achievements ===============-->
-<section id="activity">
-<h2>Activities and Achievements</h2>
-
-<hr />
-<ul>
-    <li>Workshop Presenter: 2016 Minnesota GIS/LIS Conference |&nbsp;<small><i>Designing a Long-Term GIS Vision &amp; Implementation Plan&quot;<a href="https://drive.google.com/open?id=1KENc1VolWc0DU_OcF6YkToNKkxH_ezbvQB1vDu2ebzc" target="_blank"> (Slides) </a><a href="https://drive.google.com/open?id=0B5a21zG7vPqRMDVBSkFjOVBNN2M"> (Download Workshop Materials)</a></i></small></li>
-    <li>Presenter: 2016 Northern MN GIS User Group | <small><i><a href="http://slides.com/khsundeen/simplifying-metadata-editing-for-the-non-programmer" target="_blank">Simplifying Metadata Editing for the Non-Programmer</a></i></small></li>
-	<li>Presenter: 2015 Northern WI GIS User&#39;s Group | <small><i><a href="http://slides.com/khsundeen/deck" target="_blank"> Having Fun with a Homegrown Approach to a GIS User Needs Assessment: With a Bonus Implementation Plan! </a></i></small></li>
-	<li>Presenter: 2015 Minnesota GIS/LIS | <small><i><a href="https://prezi.com/x8zvbx-uc4fs/from-the-field-through-the-firewall-an-approach-to-streamlining-utility-gis-data-access-in-the-field-office-web/" target="_blank">From the Field through the Firewall: an Approach to Streamlining Utility GIS Data Access in the Field, Office, &amp; Web</a></i></small></li>
-	<li>Presenter: 2015 Wisconsin Land Information Association | <small><i><a href="https://prezi.com/t8aw5muwgho0/bringing-free-open-source-gis-to-indian-country/" target="_blank">Bringing Free &amp; Open Source GIS to Indian Country</a></i></small></li>
-	<li>Presenter: 2013 National Tribal GIS Conference | <small><i>GIS Site Selection for Development in the Bad River Reservation: a weighted analysis for avoiding impacts to wetlands &amp; cultural historic sites</i></small></li>
-	<li>Presenter: 2012 UW-Madison GIS Day Expo | <small><i>Searching for Risky Power Lines: Predicting sandhill crane flight behavior &amp; collision risk in WI</i></small></li>
-	<br />
-	<li>1st Place: Large-format map, 2014 National Tribal GIS Conference | <small><i><a href="maps/penokeemine.jpg" target="_blank">A Bird&#39;s Eye View of the Bad River Watershed &amp; Proposed Mine</a></i></small></li>
-	<br />
-	<li>Grant Awarded 2015: FEMA Pre-Disaster Mitigation Program | <small><i>$127,000 for developing a new webmapping and database system for the Bad River Tribe</i></small></li>
-	<li>Grant Awarded 2013: ESRI Conservation Grant Program | <small><i>$5,200 for Esri training</i></small></li>
-	<li>Grant Awarded 2010: Animal Welfare Research Grant | <small><i>$10,000 for UW-Madison research</i></small></li>
-	<li>Grant Awarded: 2010 | <small> <i>$500 for a UW-Madison Travel Grant</i></small></li>
-	<li>Conference Committee Member 2016: Minnesota GIS/LIS Conference,&nbsp;<small><i>WorkshopCommittee</i></small></li>
-	<li>Board of Directors 2014-2015: Wisconsin Land Information Association (WLIA),<small><i>Chair of Membership Committee</i></small></li>
-	<li>Committee Member 2014-2015: National Tribal Geographic Information Support Center (NTGISC), <small><i>Publications Committee</i></small></li>
-</ul>
-</section>
-
-<p class="pull-right"><a href="#top">Back to top</a></p>
-</div>
-</div>
-<!--content--></div>
-<!-- row --></div>
-<!--module--></div>
-<!--container--></article>
-</div>
-<!-- bottom container --></div>
-<!-- end navbar scrollspy-->
-
-<!-- FOOTER -->
-
-<p></p>
-
-<p><br />
-<!-- Modal --></p>
-
-<p></p>
-
-<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-form" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content"><!-- Modal Header -->
-<div class="modal-header"><button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span> <span class="sr-only">Close</span></button>
-
-<h4 class="modal-title" id="myModalLabel">Contact Me!<small style="color:red;"><i> | page under construction. Please send email directly to kim.h.sundeen@gmail.com</i></small></h4>
-</div>
-<!-- Modal Body & Form -->
-
-<div class="modal-body">
-<form method="post" role="form">
-<div class="form-group"><label>Your Name</label> <input class="form-control" placeholder="Enter your Name" type="text" /></div>
-<label>Phone</label>
-
-<div class="form-group input-group"><span class="input-group-addon">1+</span> <input class="form-control" id="phone" placeholder="xxx-xxx-xxxx" type="tel" /></div>
-
-<div class="form-group input-group "><label for="exampleInputEmail1">Email address:</label> <input class="form-control" placeholder="Enter your email" type="email" /></div>
-
-<div class="form-group"><label>Your Message</label><textarea class="form-control" cols="40" id="usr-form" placeholder="Write a message" rows="4">					  </textarea> <!--<div class="checkbox">
-                           <label>
-                               <input type="checkbox"/> Send a copy to me.--> <!-- Send me a copy checkbozx button -->
-
-<div class="btn-group" data-toggle="buttons"><label class="btn btn-primary btn-sm"><input type="checkbox" /> Send me a copy. </label> <label class="btn btn-danger btn-sm"> <input type="checkbox" />This is Urgent! </label></div>
-<br />
-<!-- Options for how to best be reached button -->
-<div class="btn-group" data-toggle="buttons">&nbsp;
-<p>How would you prefer to be contacted?</p>
-<label class="btn btn-info btn-sm"><input type="radio" /> Phone </label> <label class="btn btn-info btn-sm"> <input type="radio" /> Email </label> <label class="btn btn-info btn-sm"> <input type="radio" /> Either </label></div>
-</div>
-<button class="btn btn-danger" type="reset" value="Reset">Reset</button></form>
-
-<div id="message"></div>
-</div>
-<!-- Modal Footer -->
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary" id="sent-message" type="submit">Send Email</button></div>
-</div>
-</div>
-</div>
-<!-- end Modal -->
-
-<footer class="container"><!-- space out with columns  md 3-2-2-4-1(pull-right)-->
-<div class="well">
-<div class="row">
-<div class="col-xs-6 col-md-3">
-<p><a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/80x15.png" style="border-width:0" /></a><br />
-<span href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type" xmlns:dct="http://purl.org/dc/terms/">Website</span> hand coded by <a href="http://sunnyspace.org/kimsundeen/" property="cc:attributionName" rel="cc:attributionURL" xmlns:cc="http://creativecommons.org/ns#">Kim Sundeen</a><br />
-<a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution<br />
-4.0 International License</a>.</p>
-</div>
-
-<div class="col-md-2"></div>
-<!-- space out with columns -->
-
-<div class="col-xs-6 col-md-2">
-<p><button class="btn btn-md" id="fbbutton" style="padding: 0 20px 0 0" type="button"></button><a href="https://www.facebook.com/kimnesssundeen" id="FB" target="_blank" title="Share on Facebook">Facebook </a></p>
-
-<p><button class="btn btn-md" id="twbutton" style="padding: 0 10px 0 0" type="button"></button><a href="https://twitter.com/ksundeen">Twitter </a></p>
-
-<p><button class="btn btn-md" id="libutton" style="padding:0 10px 0 0" type="button"></button><a href="https://www.linkedin.com/in/kim-sundeen-63007a16">LinkedIn </a></p>
-
-<p><a href="mailto:kim.h.sundeen@gmail.com?subject=I'm%20Interested!">Email me!</a></p>
-
-<p>+1 218.590.1330</p>
-</div>
-
-<div class="col-md-4"></div>
-<!-- space out with columns -->
-
-<div class="col-xs-6 col-md-1">
-<p class="pull-right"><a href="#top" style="color:#428bca">Back to top</a></p>
-</div>
-</div>
-<!-- end row --></div>
-<!-- end well --></footer>
-</body>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!--/.container-fluid -->
+            </div>
+            <!--/ static navbar -->
+        </div>
+        <!-- /container -->
+        <!-- /top container -->
+        <div data-spy="scroll" data-target=".bs-docs-sidebar">
+            <div class="container">
+                <article id="article-middle" role="main" style="padding-top: 50px;">
+                    <div class="about container">
+                        <div class="module module-article">
+                            <!--/ row contains all cv lists -->
+                            <div class="row">
+                                <!--Nav Bar Sidebar-->
+                                <nav class="col-xs-3 bs-docs-sidebar hidden-xs hidden-sm" id="scroll_navBar" role="navigation">
+                                    <!-- <ul id="sidebar" class="nav nav-stacked fixed">	-->
+                                    <ul class="nav nav-list affix" id="sidebar">
+                                        <li><a href="#education">Education</a></li>
+                                        <li><a href="#experience">Experience</a></li>
+                                        <li><a href="#tech">Technical Skills</a></li>
+                                        <li><a href="#media">Publications</a></li>
+                                        <li><a href="#activity">Activities &amp; Achievements</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="row col-md-9" style="padding-top: 10px;">
+                                    <div class=".col-md-8">
+                                        <section id="overview">
+                                            <div class="page-header">
+                                                <h1>Curriculum Vitae |<small> and all the fine details</small></h1>
+                                            </div>
+                                        </section>
+                                        <section id="education">
+                                            <h2>Education</h2>
+                                            <hr />
+                                            <p class="pull-right"><strong>Anticipated Graduation: Summer, 2018</strong></p>
+                                            <p><strong>Professional Master of Science: Geographic Information Systems &amp; Web Map Programming</strong></p>
+                                            <ul>
+                                                <li>University of Wisconsin-Madison</li>
+                                                <li>Research Interests: Electric Utility Analytics, Field Force Automation, Real-time Web Cartography</li>
+                                            </ul>
+                                            &nbsp;
+                                            <p class="pull-right"></p>
+                                            <p class="pull-right"><strong>2012</strong></p>
+                                            <p><strong>Graduate Certificate in GIS</strong></p>
+                                            <ul>
+                                                <li>University of Wisconsin-Madison</li>
+                                                <li>Thesis: <a href="assets/researchpapers/PredictingHgConcInGreatLakes_KimNessSundeen.pdf" target="_blank">A Remote Sensing Approach to Predicting Mercury Concentration in the Great Lakes Region using Leaf Area Index.</a></li>
+                                                <li>Research Interests: Interactive Cartography, Geostatistics, GeoComputing, Hyrdrologic Spatial Modeling, Remote Sensing</li>
+                                            </ul>
+                                            &nbsp;
+                                            <p class="pull-right"><strong>2011</strong></p>
+                                            <p><strong>Master of Science: Conservation Biology and Sustainable Development</strong></p>
+                                            <ul>
+                                                <li>University of Wisconsin-Madison</li>
+                                                <li>Thesis: <a href="assets/researchpapers/ness-sundeen_ms_thesis.pdf" target="_blank">Using Abrupt Flight Reactions as Indicators of Power Line Risk for Greater Sandhill Cranes (Grus Canadensis Tabida) across Two South-Central Wisconsin Landscapes.</a></li>
+                                                <li>Research Interests: Wildlife Biology, Species Distribution Predictive Modelling &amp; Mapping, Geostatistics, GeoComputing with R</li>
+                                            </ul>
+                                            &nbsp;
+                                            <p class="pull-right"><strong>2006</strong></p>
+                                            <p><strong>Bachelor of Science: Wildlife Ecology</strong></p>
+                                            <ul>
+                                                <li>University of Wisconsin-Madison</li>
+                                                <li>Minor in Environmental Studies</li>
+                                            </ul>
+                                        </section>
+                                        <!--======== Experience =========-->
+                                        <section id="experience">
+                                            <h2>Experience</h2>
+                                            <hr />
+                                            <p class="pull-right"><strong>2016&nbsp;- Current</strong></p>
+                                            <p><strong>GIS Programmer Analyst</strong></p>
+                                            <p><strong><a href="http://www.mnpower.com/">GIS &amp; Facility Operations, MN Power</a>, Duluth, MN</strong></p>
+                                            <ul>
+                                                <li>
+                                                    GIS Administrator
+                                                    <ul>
+                                                        <li>Database Management | <small><i>Recommend new data structures for improved access &amp; organization (ArcGIS SDE, Postgresql)</i></small></li>
+                                                        <li>Manage Distributed Data | <small> <i>Replication, synchronization, versioning</i></small></li>
+                                                        <li>Technical &amp; Administrative Support | <small><i>Develop training materials &amp; process documentation for web applications for staff&nbsp;</i></small></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    Web Developer
+                                                    <ul>
+                                                        <li>Coordinate Agile Scrum Methodology meetings&nbsp;to Identify Mapping&nbsp;Solutions | <small> <i>To interactively idetnify mapping application requirements with users</i></small></li>
+                                                        <li>Develop &amp; publish GIS services for public &amp; utilities-specific applications, &amp; ArcGIS Online Data Portals</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    GIS Developer
+                                                    <ul>
+                                                        <li>Coordinated Full Life-Cycle Software Development | <small><i>For mapping web data-entry applications using Python &amp; ArcGIS Online</i></small></li>
+                                                        <li>Cartography | <small> <i>Create map books, posters, &amp; other digital maps for field data collection by staff</i></small></li>
+                                                        <li>Python Development | <small><i>Develop automation routines to reduce need for manual map production</i></small></li>
+                                                        <li>Mobile Maps Developer| <small><i>Configured &amp; developed new mapping systems for mobile data collection using Survey123 &amp;&nbsp;ArcGIS for Collector</i></small></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            &nbsp; <!------------------------------------------------------------------------------------------>
+                                            <p class="pull-right"></p>
+                                            <p class="pull-right"><strong>2015 - 2016</strong></p>
+                                            <p><strong>GIS Specialist</strong></p>
+                                            <p><strong><a href="http://www.duluthmn.gov/" target="_blank">Engineering Division, Public Works &amp; Utilities Dept., City of Duluth</a>, Duluth, MN</strong></p>
+                                            <ul>
+                                                <li>
+                                                    GIS Administrator
+                                                    <ul>
+                                                        <li>Implemented a GIS User Needs Assessment | <small><i><a href="http://slides.com/khsundeen/deck" target="_blank">Presentation</a> | <a href="https://drive.google.com/folderview?id=0B5a21zG7vPqRMXZiWDZMZ3JJYlU&amp;usp=sharing" target="_blank">Download materials</a></i></small></li>
+                                                        <li>Database Management | <small><i>Recommend new data structures for improved access &amp; organization (ArcGIS SDE, Postgresql)</i></small></li>
+                                                        <li>Database Administrator | <small> <i>ArcGIS SDE &amp; Microsoft SQL Server</i></small></li>
+                                                        <li>Manage Distributed Data | <small> <i>Replication, synchronization, versioning</i></small></li>
+                                                        <li>Technical &amp; Administrative Support | <small><i>Develop training for data entry &amp; map use by GIS users</i></small></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    Web Developer
+                                                    <ul>
+                                                        <li>IT Administrator | <small> <i>Coordinated with IT Dept. to upgrade ArcGIS for Server to upgrade GIS system infrastructure</i></small></li>
+                                                        <li>Coordinate IT meetings to Identify Solutions | <small> <i>To improve City GIS infrastructure for implementing new webmap applications</i></small></li>
+                                                        <li>Develop &amp; publish GIS services for public &amp; utilities-specific applications, &amp; ArcGIS Online Data Portals</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    GIS Developer
+                                                    <ul>
+                                                        <li>Coordinated Full Life-Cycle Software Development | <small><i>For mapping web data-entry applications using Python &amp; ArcGIS Online</i></small></li>
+                                                        <li>ArcGIS Server Manager | <small><i>Web Services with Security </i></small></li>
+                                                        <li>Cartography | <small> <i>Create map books, posters, &amp; other digital maps for City Council meetings, reports, research, &amp; public alerts</i></small></li>
+                                                        <li>Python Development | <small><i>Develop GIS data access tools &amp; Python application development for automation</i></small></li>
+                                                        <li>GPS Data Manager | <small><i>Configured &amp; developed new systems for GPS mobile data collection</i></small></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            &nbsp; <!------------------------------------------------------------------------------------------>
+                                            <p class="pull-right"></p>
+                                            <p class="pull-right"><strong>2012 - 2015</strong></p>
+                                            <p><strong>GIS Specialist</strong></p>
+                                            <p><strong><a href="http://www.badriver-nsn.gov/tribal-operations/natural-resources/gis-maps/" target="_blank">Bad River Band of the Lake Superior Chippewa Tribe</a>, Odanah, WI</strong></p>
+                                            <ul>
+                                                <li>
+                                                    GIS Administrator
+                                                    <ul>
+                                                        <li>GIS Data Manager | <small><i>Improved on reservation-wide GIS ownership, transportation, &amp; hydrology infrastructure; Migrated existing data to consolidated data structure</i></small></li>
+                                                        <li>Database Manager | <small><i>Configured &amp; managed GIS databases including ArcGIS for Server 10.x, ArcSDE, Microsoft SQL Server, and Postgresql</i></small></li>
+                                                        <li>Managed ArcGIS fpr Server | <small><i>Published &amp; managed web services with security</i></small></li>
+                                                        <li>Provided technical support | <small><i>Trained &amp; supported GIS Users</i></small></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    Web Developer
+                                                    <ul>
+                                                        <li>Streamlined digital government services online| <small><i>Made services more usable &amp; accessible through the website</i></small></li>
+                                                        <li>Web-Database Manager | <small><i>Managed grants for implementing database-enabled webmapping applications for web-entry through the website</i></small></li>
+                                                        <li>Updated Bad River Website | <small><i>Coordinated website update design &amp; end-user training with IT Director</i></small></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    GIS Developer
+                                                    <ul>
+                                                        <li>GIS Application Development | <small><i>Created public facing &amp; internal GIS mobile-ready data collection: Developed &amp; published GIS services for natural resources, hydrology, ownership, &amp; transportation through Google Maps API, Esri Javascript API, ArcGIS Online, &amp; GeoMoose</i></small></li>
+                                                        <li>Cartography | <small><i>Created large poster, digital, &amp; map books of tribal-specific research &amp; public information</i></small></li>
+                                                        <li>Python Development | <small><i>Automated GIS modeling, analysis, mapping &amp; tasks with Python</i></small></li>
+                                                        <li>GPS Data Manager | <small><i>Configured &amp; developed new systems for GPS mobile data collection</i></small></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <p><span style="color:#696969;">&nbsp; *</span><em><span style="color:#696969;">I developed the webpage and all web applications on their current</span><span style="color:#FF0000;"> </span><strong><a href="http://www.badriver-nsn.gov/tribal-operations/natural-resources/gis-maps/webmaps"><span style="color:#FF0000;">GIS webpage</span></a></strong></em></p>
+                                            &nbsp;
+                                            <p></p>
+                                            <p class="pull-right"><strong>2010 - 2012</strong></p>
+                                            <p><strong>GIS Project Assistant</strong></p>
+                                            <p><strong><a href="http://son.wisc.edu/" target="_blank">UW-Madison School of Nursing</a>, Madison, WI</strong></p>
+                                            <ul>
+                                                <li>Developed Python algorithms to compare water quality interpolated data related to how map readers perceived their water quality risk</li>
+                                                <li>Reviewed &amp; published research articles for publication into public health &amp; risk mapping journals | <small><a href="http://arrow.monash.edu.au/vital/access/manager/Repository/monash:128304" target="_blank"><i>Accuracy of residents&#39; perceived home locations on an environmental risk map. (2014)</i></a></small></li>
+                                                <li>Documented methods for repeating and improving GIS analysis, python programs, and georeferencing routines</li>
+                                                <li>Trained student employees on GIS data entry and georeferencing standards</li>
+                                            </ul>
+                                            &nbsp;
+                                            <p class="pull-right"><strong>2012</strong></p>
+                                            <p><strong>Web/GIS Technician</strong></p>
+                                            <p><strong><a href="http://www.sco.wisc.edu/" target="_blank">Wisconsin State Cartographer&#39;s Office</a></strong></p>
+                                            <ul>
+                                                <li>Customized Python scripts &amp; ArcGIS add-ins to create natural basemaps of WI &amp; updating the Cartographer&rsquo;s website</li>
+                                                <li>Developed updated Wisconsin terrain basemaps</li>
+                                                <li>Created small file geodatabases for storing GIS data used in maps</li>
+                                                <li>Updated content on State Cartographer&rsquo;s website</li>
+                                            </ul>
+                                            &nbsp;
+                                            <p class="pull-right"><strong>2012</strong></p>
+                                            <p><strong>Senior Natural Resources Research Scientist</strong></p>
+                                            <p><strong><a href="http://dnr.wi.gov/" target="_blank">Wisconsin Department of Natural Resources, Bureau of Science Services</a></strong></p>
+                                            <ul>
+                                                <li>Analyzed &amp; organized water quality data for input into linear regression models using Python, ArcGIS tools, &amp; opensource GIS &amp; mapping tools</li>
+                                                <li>Created digital maps of soil conservation areas &amp; runoff for publications</li>
+                                                <li>Created &amp; updated user guides for running mapping linear regression online tools</li>
+                                                <li>Created maps &amp; reviewed research articles for publication on environmental assessment tools | <small><a href="http://dnr.wi.gov/files/PDF/pubs/ss/SS1142.pdf" target="_blank"><i>Expanded Beach &ldquo;Nowcast&rdquo; Modeling across Wisconsin. (2014)</i></a></small></li>
+                                            </ul>
+                                            &nbsp;
+                                            <p class="pull-right"><strong>2011 - 2012</strong></p>
+                                            <p><strong>Biologist/GIS Technician</strong></p>
+                                            <p><strong><a href="http://wi.water.usgs.gov/" target="_blank">US Geological Survey</a></strong></p>
+                                            <ul>
+                                                <li>Entered &amp; evaluated data in one of the largest vector spatial SQL Server databases with the USFWS&rsquo; National Wetlands Inventory | <small><a href="http://www.fws.gov/wetlands/Data/Mapper.html" target="_blank"><i>US Fish &amp; Wildlife Service - National Wetlands Inventory Wetlands Mapper (2014)</i></a></small></li>
+                                                <li>Review existing wetlands data &amp; followed QA &amp; QC standard operating procedures for ensuring correct data</li>
+                                                <li>Converted raster mylar wetlands inventories into vector systems of wetlands datasets using ArcGIS tools</li>
+                                                <li>Used remotely-sensed imagery to assess wetland vegetation</li>
+                                            </ul>
+                                            <br />
+                                        </section>
+                                        <p class="pull-right"><a href="#top">Back to top</a></p>
+                                        <section id="tech">
+                                            <!--======== Technical Skills =========-->
+                                            <h2>Technical Skills</h2>
+                                            <hr />
+                                            <p><strong>Mapping Technologies: </strong></p>
+                                            <ul>
+                                                <li>ESRI ArcPro 1.4,&nbsp;ArcGIS 9.X-10.X, ArcGIS Server 10.x, ArcGIS Online, Google Earth, Open source GIS (QGIS, GDAL, OGR, MapServer)</li>
+                                            </ul>
+                                            <p><strong>GPS Technologies: </strong></p>
+                                            <ul>
+                                                <li>ESRI ArcPad 7.x-10.x, Terrasync 5.6, Pathfinder Office 5.4</li>
+                                            </ul>
+                                            <p><strong>Server-Side & Web Development: </strong></p>
+                                            <ul>
+                                                <li>Python, SQL, HTML5, CSS3, JavaScript, PHP, jQuery, Bootstrap, Dreamweaver, Firebug, Google Analytics&nbsp;</li>
+                                            </ul>
+                                            <p><strong>Coding Version Control: </strong></p>
+                                            <ul>
+                                                <li>GitHub, TortoiseSVN</li>
+                                            </ul>
+                                            <p><strong>Mapping API Development: </strong></p>
+                                            <ul>
+                                                <li>ArcGIS for JavaScript, Leaflet, Mapbox, Google Maps, OpenLayers</li>
+                                            </ul>
+                                            <p><strong>Graphics Software: </strong></p>
+                                            <ul>
+                                                <li>Adobe Illustrator, Adobe Photoshop</li>
+                                            </ul>
+                                            <p><strong>Database Technologies: </strong></p>
+                                            <ul>
+                                                <li>Microsoft SQL Server, 12c Oracle, PostgreSQL (PostGIS), MySQL, MS Access, Excel, CSV</li>
+                                            </ul>
+                                            <p><strong>Professional Licenses: </strong></p>
+                                            <ul>
+                                                <li>Certified Geographic Information Systems Professional, GISP #84940</li>
+                                            </ul>
+                                        </section>
+                                        <p class="pull-right"><a href="#top">Back to top</a></p>
+                                        <!--============= MEDIA ===============-->
+                                        <section id="media">
+                                            <h2>Publications</h2>
+                                            <hr />
+                                            <p><strong>Research Papers</strong></p>
+                                            <ul>
+                                                <li>GIS Certificate Thesis: <a href="assets/researchpapers/PredictingHgConcInGreatLakes_KimNessSundeen.pdf" target="_blank">A Remote Sensing Approach to Predicting Mercury Concentration in the Great Lakes Region using Leaf Area Index.</a></li>
+                                                <li>MS Thesis: <a href="assets/researchpapers/ness-sundeen_ms_thesis.pdf" target="_blank">Using Abrupt Flight Reactions as Indicators of Power Line Risk for Greater Sandhill Cranes (Grus Canadensis Tabida) across Two South-Central Wisconsin Landscapes.</a></li>
+                                                <li><a href="http://arrow.monash.edu.au/vital/access/manager/Repository/monash:128304" target="_blank">Accuracy of residents&#39; perceived home locations on an environmental risk map. (2014)</a></li>
+                                                <li><a href="http://dnr.wi.gov/files/PDF/pubs/ss/SS1142.pdf" target="_blank">Expanded Beach &ldquo;Nowcast&rdquo; Modeling across Wisconsin. (2014)</a></li>
+                                            </ul>
+                                            <p><strong>Collaborative Programming & Code Repositories: </strong></p>
+                                            <ul>
+                                                <li>GitHub | <a href="https://github.com/ksundeen" target="blank">Github.com/ksundeen</a></li>
+                                                <li>Stack Exchange | <a href="http://gis.stackexchange.com/users/48566/fynnster" target="blank">Gis.stackexchange.com/users/48566/fynnster</a></li>
+                                                <li>Esri's GeoNet | <a href="https://geonet.esri.com/people/ksundeen_mnpower">Geonet.esri.com/people/ksundeen_mnpower</a></li>
+                                            </ul>
+                                            </ul>
+                                        </section>
+                                        <p class="pull-right"><a href="#top">Back to top</a></p>
+                                        <!--============= Activities & Achievements ===============-->
+                                        <section id="activity">
+                                            <h2>Activities and Achievements</h2>
+                                            <hr />
+                                            <ul>
+                                                <li>Workshop Presenter: 2016 Minnesota GIS/LIS Conference |&nbsp;<small><i>Designing a Long-Term GIS Vision &amp; Implementation Plan&quot;<a href="https://drive.google.com/open?id=1KENc1VolWc0DU_OcF6YkToNKkxH_ezbvQB1vDu2ebzc" target="_blank"> (Slides) </a><a href="https://drive.google.com/open?id=0B5a21zG7vPqRMDVBSkFjOVBNN2M"> (Download Workshop Materials)</a></i></small></li>
+                                                <li>Presenter: 2016 Northern MN GIS User Group | <small><i><a href="http://slides.com/khsundeen/simplifying-metadata-editing-for-the-non-programmer" target="_blank">Simplifying Metadata Editing for the Non-Programmer</a></i></small></li>
+                                                <li>Presenter: 2015 Northern WI GIS User&#39;s Group | <small><i><a href="http://slides.com/khsundeen/deck" target="_blank"> Having Fun with a Homegrown Approach to a GIS User Needs Assessment: With a Bonus Implementation Plan! </a></i></small></li>
+                                                <li>Presenter: 2015 Minnesota GIS/LIS | <small><i><a href="https://prezi.com/x8zvbx-uc4fs/from-the-field-through-the-firewall-an-approach-to-streamlining-utility-gis-data-access-in-the-field-office-web/" target="_blank">From the Field through the Firewall: an Approach to Streamlining Utility GIS Data Access in the Field, Office, &amp; Web</a></i></small></li>
+                                                <li>Presenter: 2015 Wisconsin Land Information Association | <small><i><a href="https://prezi.com/t8aw5muwgho0/bringing-free-open-source-gis-to-indian-country/" target="_blank">Bringing Free &amp; Open Source GIS to Indian Country</a></i></small></li>
+                                                <li>Presenter: 2013 National Tribal GIS Conference | <small><i>GIS Site Selection for Development in the Bad River Reservation: a weighted analysis for avoiding impacts to wetlands &amp; cultural historic sites</i></small></li>
+                                                <li>Presenter: 2012 UW-Madison GIS Day Expo | <small><i>Searching for Risky Power Lines: Predicting sandhill crane flight behavior &amp; collision risk in WI</i></small></li>
+                                                <br />
+                                                <li>1st Place: Large-format map, 2014 National Tribal GIS Conference | <small><i><a href="maps/penokeemine.jpg" target="_blank">A Bird&#39;s Eye View of the Bad River Watershed &amp; Proposed Mine</a></i></small></li>
+                                                <br />
+                                                <li>Grant Awarded 2015: FEMA Pre-Disaster Mitigation Program | <small><i>$127,000 for developing a new webmapping and database system for the Bad River Tribe</i></small></li>
+                                                <li>Grant Awarded 2013: ESRI Conservation Grant Program | <small><i>$5,200 for Esri training</i></small></li>
+                                                <li>Grant Awarded 2010: Animal Welfare Research Grant | <small><i>$10,000 for UW-Madison research</i></small></li>
+                                                <li>Grant Awarded: 2010 | <small> <i>$500 for a UW-Madison Travel Grant</i></small></li>
+                                                <li>Conference Committee Member 2016: Minnesota GIS/LIS Conference,&nbsp;<small><i>WorkshopCommittee</i></small></li>
+                                                <li>Board of Directors 2014-2015: Wisconsin Land Information Association (WLIA),<small><i>Chair of Membership Committee</i></small></li>
+                                                <li>Committee Member 2014-2015: National Tribal Geographic Information Support Center (NTGISC), <small><i>Publications Committee</i></small></li>
+                                            </ul>
+                                        </section>
+                                        <p class="pull-right"><a href="#top">Back to top</a></p>
+                                    </div>
+                                </div>
+                                <!--content-->
+                            </div>
+                            <!-- row -->
+                        </div>
+                        <!--module-->
+                    </div>
+                    <!--container-->
+                </article>
+            </div>
+            <!-- bottom container -->
+        </div>
+        <!-- end navbar scrollspy-->
+        <!-- FOOTER -->
+        <p></p>
+        <p>
+            <br />
+            <!-- Modal -->
+        </p>
+        <p></p>
+        <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-form" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span> <span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Contact Me!<small style="color:red;"><i> | page under construction. Please send email directly to kim.h.sundeen@gmail.com</i></small></h4>
+                    </div>
+                    <!-- Modal Body & Form -->
+                    <div class="modal-body">
+                        <form method="post" role="form">
+                            <div class="form-group"><label>Your Name</label> <input class="form-control" placeholder="Enter your Name" type="text" /></div>
+                            <label>Phone</label>
+                            <div class="form-group input-group"><span class="input-group-addon">1+</span> <input class="form-control" id="phone" placeholder="xxx-xxx-xxxx" type="tel" /></div>
+                            <div class="form-group input-group "><label for="exampleInputEmail1">Email address:</label> <input class="form-control" placeholder="Enter your email" type="email" /></div>
+                            <div class="form-group">
+                                <label>Your Message</label>
+                                <textarea class="form-control" cols="40" id="usr-form" placeholder="Write a message" rows="4">					  </textarea>
+                                <!--<div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"/> Send a copy to me.--> <!-- Send me a copy checkbozx button -->
+                                <div class="btn-group" data-toggle="buttons"><label class="btn btn-primary btn-sm"><input type="checkbox" /> Send me a copy. </label> <label class="btn btn-danger btn-sm"> <input type="checkbox" />This is Urgent! </label></div>
+                                <br />
+                                <!-- Options for how to best be reached button -->
+                                <div class="btn-group" data-toggle="buttons">
+                                    &nbsp;
+                                    <p>How would you prefer to be contacted?</p>
+                                    <label class="btn btn-info btn-sm"><input type="radio" /> Phone </label> <label class="btn btn-info btn-sm"> <input type="radio" /> Email </label> <label class="btn btn-info btn-sm"> <input type="radio" /> Either </label>
+                                </div>
+                            </div>
+                            <button class="btn btn-danger" type="reset" value="Reset">Reset</button>
+                        </form>
+                        <div id="message"></div>
+                    </div>
+                    <!-- Modal Footer -->
+                    <div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary" id="sent-message" type="submit">Send Email</button></div>
+                </div>
+            </div>
+        </div>
+        <!-- end Modal -->
+        <footer class="container">
+            <!-- space out with columns  md 3-2-2-4-1(pull-right)-->
+            <div class="well">
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                        <p><a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/80x15.png" style="border-width:0" /></a><br />
+                            <span href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type" xmlns:dct="http://purl.org/dc/terms/">Website</span> hand coded by <a href="http://sunnyspace.org/kimsundeen/" property="cc:attributionName" rel="cc:attributionURL" xmlns:cc="http://creativecommons.org/ns#">Kim Sundeen</a><br />
+                            <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution<br />
+                            4.0 International License</a>.
+                        </p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <!-- space out with columns -->
+                    <div class="col-xs-6 col-md-2">
+                        <p><button class="btn btn-md" id="fbbutton" style="padding: 0 20px 0 0" type="button"></button><a href="https://www.facebook.com/kimnesssundeen" id="FB" target="_blank" title="Share on Facebook">Facebook </a></p>
+                        <p><button class="btn btn-md" id="twbutton" style="padding: 0 10px 0 0" type="button"></button><a href="https://twitter.com/ksundeen">Twitter </a></p>
+                        <p><button class="btn btn-md" id="libutton" style="padding:0 10px 0 0" type="button"></button><a href="https://www.linkedin.com/in/kim-sundeen-63007a16">LinkedIn </a></p>
+                        <p><a href="mailto:kim.h.sundeen@gmail.com?subject=I'm%20Interested!">Email me!</a></p>
+                        <p>+1 218.590.1330</p>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <!-- space out with columns -->
+                    <div class="col-xs-6 col-md-1">
+                        <p class="pull-right"><a href="#top" style="color:#428bca">Back to top</a></p>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end well -->
+        </footer>
+        <!--put your external script links here-->
+        <script type="text/javascript" src="lib/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap.min.js">
+            $('.carousel').carousel({
+            interval: 9000,
+            pause: 'none'
+            });     
+        </script>
+        <!--My js script to make divs animated up & down -->
+        <script type="text/javascript" src="lib/animate.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/scrollspy.js"></script>      
+    </body>
 </html>
