@@ -1,3 +1,18 @@
+<?php
+/*
+    Contact Form from HTML Form Guide
+    This program is free software published under the
+    terms of the GNU Lesser General Public License.
+    See this page for more info:
+    http://www.html-form-guide.com/contact-form/simple-modal-popup-contact-form.html
+*/
+//1. First, include the file popup-contactform.php
+require_once('popup-contactform.php');
+
+//2. link to the style file contact.css
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" manifest="kimsundeen.appcache">
 <head><
@@ -9,21 +24,23 @@
     <meta name="keywords" content="Kim, GIS, GIS programmer, GIS analyst, Cartographer">
 	<title>Maps-on-the-Mind</title>
 	
-    <!-- Bootstrap --><!-- Latest compiled and minified CSS --><!---- to test locally, change "//maxcdn..." to "http://maxcdn..." to access the http protocol------>
-	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script type="text/javascript" src="lib/animate.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
-         $('.carousel').carousel({
-         interval: 9000,
-         pause: 'none'
-         }); 
-    </script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/scrollspy.js"></script>
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-	
+    <!-- Bootstrap --><!-- Latest compiled and minified CSS -->
+    <!---- to test locally, change "//maxcdn..." to "http://maxcdn..." to access the http protocol------>
+    
+    <!--put your Bootstrap stylesheet links below this comment and above style.css-->
+	<!--<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylebasic.css">
+    <link rel="stylesheet" type="text/css" href="popup-captcha-form-1/contact.css"
     <!-- My css -->
     <link rel="stylesheet" type="text/css" href="css/style.css"> 
-   
+    
+    <!-- local reference to awesome font-->
+	<link href="css/font-awesome.min.css" rel="stylesheet" />
+
+	<!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />-->
+	
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -31,15 +48,15 @@
     
     <!-- Google Analytics -->
     <script>
-         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-         
-         ga('create', 'UA-73075550-1', 'auto');
-         ga('send', 'pageview');
-         
-      </script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-88367987-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQNGQQ"
@@ -226,15 +243,15 @@
 
      <!-- Modal -->
       <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" 
-         aria-labelledby="myModalLabel" aria-hidden="true">
+         aria-labelledby="myModalLabel" aria-hidden="true" onload="javascript:fg_hideform('fg_formContainer','fg_backgroundpopup');">
          <div class="modal-dialog">
             <div class="modal-content">
                <!-- Modal Header -->
                <div class="modal-header">
-                  <button type="button" class="close" 
+                  <button type="button" class="close"
                      data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
+                      <span aria-hidden="true">&times;</span>
+                      <span class="sr-only">Close</span>
                   </button>
                   <h4 class="modal-title" id="myModalLabel">Contact Me!<small style="color:red;"><i> | page under consstruction. Please send email directly to kim.h.sundeen@gmail.com</i></small></h4>
                </div>
@@ -348,5 +365,18 @@
             </div><!-- end row -->
          </div><!-- end well -->
       </footer>
-   </body>
+    
+    		<!--put your external script links here-->
+		<script type="text/javascript" src="lib/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="lib/bootstrap.min.js">
+             $('.carousel').carousel({
+             interval: 9000,
+             pause: 'none'
+             });     
+        </script>
+        <!--My js script to make divs animated up & down -->
+        <script type="text/javascript" src="lib/animate.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/scrollspy.js"></script>      
+   
+    </body>
 </html>
