@@ -41,27 +41,16 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager -->
-    <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQNGQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PQNGQQ');
-    </script>
-    <!-- End Google Tag Manager -->
+      <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQNGQQ"
+         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+         '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+         })(window,document,'script','dataLayer','GTM-PQNGQQ');
+      </script>
+      <!-- End Google Tag Manager -->
     <div class="container">
         <!-- Static navbar -->
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -81,7 +70,7 @@
                         </li>
                         <li><a href="aboutme.html">About Me</a>
                         </li>
-                        <li><a data-toggle="modal" href="#modal-form">Contact Me</a>
+                        <li><a data-toggle="modal" href="#mymodal">Contact Me</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
@@ -519,72 +508,54 @@
     <p></p>
     <p>
         <br />
-        <!-- Modal -->
-    </p>
-    <p></p>
-    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modal-form" role="dialog" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span> <span class="sr-only">Close</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">Contact Me!<small style="color:red;"><i> | page under construction. Please send email directly to kim.h.sundeen@gmail.com</i></small></h4>
-                </div>
-                <!-- Modal Body & Form -->
-                <div class="modal-body">
-                    <form method="post" role="form">
-                        <div class="form-group">
-                            <label>Your Name</label>
-                            <input class="form-control" placeholder="Enter your Name" type="text" />
-                        </div>
-                        <label>Phone</label>
-                        <div class="form-group input-group"><span class="input-group-addon">1+</span>
-                            <input class="form-control" id="phone" placeholder="xxx-xxx-xxxx" type="tel" />
-                        </div>
-                        <div class="form-group input-group ">
-                            <label for="exampleInputEmail1">Email address:</label>
-                            <input class="form-control" placeholder="Enter your email" type="email" />
-                        </div>
-                        <div class="form-group">
-                            <label>Your Message</label>
-                            <textarea class="form-control" cols="40" id="usr-form" placeholder="Write a message" rows="4"> </textarea>
-                            <!--<div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"/> Send a copy to me.-->
-                            <!-- Send me a copy checkbozx button -->
-                            <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-primary btn-sm">
-                                    <input type="checkbox" /> Send me a copy. </label>
-                                <label class="btn btn-danger btn-sm">
-                                    <input type="checkbox" />This is Urgent! </label>
-                            </div>
-                            <br />
-                            <!-- Options for how to best be reached button -->
-                            <div class="btn-group" data-toggle="buttons">
-                                &nbsp;
-                                <p>How would you prefer to be contacted?</p>
-                                <label class="btn btn-info btn-sm">
-                                    <input type="radio" /> Phone </label>
-                                <label class="btn btn-info btn-sm">
-                                    <input type="radio" /> Email </label>
-                                <label class="btn btn-info btn-sm">
-                                    <input type="radio" /> Either </label>
-                            </div>
-                        </div>
-                        <button class="btn btn-danger" type="reset" value="Reset">Reset</button>
-                    </form>
-                    <div id="message"></div>
-                </div>
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-                    <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
-                    <button class="btn btn-primary" id="sent-message" type="submit">Send Email</button>
-                </div>
-            </div>
+        
+<!-- Contact Modal-->
+    <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h4 class="modal-title" id="myModalLabel">Contact Me!</h4>
+		  </div>
+		  <div class="modal-body">
+			<img id="modalpic" src="assets/images/nintendoprofile_small.jpg"/>
+              <div id="modalBody" class="modal-body">
+                  <p>I'm excited to chat with you about some awesome GIS and coding projects.  <span class="glyphicon glyphicon-earphone"></span> +1 218.590.1330 </p>
+                  <div class="col-xs-6 col-md-6">
+                       <p>
+                         <a id="FB"  title="Share on Facebook" target="_blank" href="https://www.facebook.com/kimnesssundeen">
+                         <button id="fbbutton" type="button" class="btn btn-md" style="padding: 0 15px 0 0">			  
+                         <i class="fa fa-facebook fa-lg"></i></button>  Facebook 
+                         </a>
+                       </p>
+                       <p>
+                         <a href="https://twitter.com/ksundeen" target="=_blank">
+                         <button id="twbutton" type="button" class="btn btn-md" style="padding: 0 10px 0 0">
+                         <i class="fa fa-twitter fa-lg"></i></button>  Twitter
+                         </a>
+                       </p>
+                  </div><!-- end col for social media col 1-->
+                  <div class="col-xs-6 col-md-6">
+                        <p>
+                            <a href="https://www.linkedin.com/in/kim-sundeen-63007a16" target="_blank">
+                            <button id="libutton" type="button" class="btn btn-md" style="padding:0 10px 0 0">			    
+                            <i class="fa fa-linkedin fa-lg"></i></button>  LinkedIn
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:kim.h.sundeen@gmail.com?subject=I'm%20Interested!"><span class="glyphicon glyphicon-envelope"></span>  Email me!</a>
+                        </p>
+                        
+                  </div><!-- end col 2 -->
+           </div><!-- end id modalBody -->
+		  </div>
+        <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
-    </div>
-    <!-- end Modal -->
+		</div>
+	  </div>
+	</div><!-- end Contact Modal-->
+    
     <footer class="container">
         <!-- space out with columns  md 3-2-2-4-1(pull-right)-->
         <div class="well">

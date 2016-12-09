@@ -71,7 +71,7 @@
                   <ul class="nav navbar-nav">
                      <li><a href="index.html">Home</a></li>
                      <li><a href="aboutme.html">About Me</a></li>
-                     <li><a data-toggle="modal" href="#modal-form">Contact Me</a></li>
+                     <li><a data-toggle="modal" href="#mymodal">Contact Me</a></li>
                      <li class="active dropdown">
                         <a href="#" class="active dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -396,84 +396,54 @@
       </article>
       <!-- FOOTER -->
       <br/><br/>
-      <!-- Modal -->
-      <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" 
-         aria-labelledby="myModalLabel" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <!-- Modal Header -->
-               <div class="modal-header">
-                  <button type="button" class="close" 
-                     data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span>
-                  <span class="sr-only">Close</span>
-                  </button>
-                  <h4 class="modal-title" id="myModalLabel">Contact Me!<small style="color:red;"><i> | page under consstruction. Please send email directly to kim.h.sundeen@gmail.com</i></small></h4>
-               </div>
-               <!-- Modal Body & Form -->
-               <div class="modal-body">
-                  <form role="form" method="post">
-                     <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your Name"/>
-                     </div>
-                     <label>Phone</label>
-                     <div class="form-group input-group">
-                        <span class="input-group-addon">1+</span>
-                        <input type="tel" class="form-control" id="phone" placeholder="xxx-xxx-xxxx">
-                     </div>
-                     <div class="form-group input-group ">
-                        <label for="exampleInputEmail1">Email address:</label>
-                        <input type="email" class="form-control" placeholder="Enter your email"/>
-                     </div>
-                     <div class="form-group">
-                        <label>Your Message</label>
-                        <textarea rows="4" cols="40" class="form-control"
-                           id="usr-form" placeholder="Write a message">
-					  </textarea>
-                        <!--<div class="checkbox">
-                           <label>
-                               <input type="checkbox"/> Send a copy to me.-->
-                        <!-- Send me a copy checkbozx button -->
-                        <div class="btn-group" data-toggle="buttons">
-                           <label class="btn btn-primary btn-sm">
-                                <input type="checkbox"> Send me a copy.
-                           </label>
-                           <label class="btn btn-danger btn-sm">
-                                <input type="checkbox">This is Urgent!
-                           </label>
-                        </div>
-                        <br/>
-                        <!-- Options for how to best be reached button -->
-                        <div class="btn-group" data-toggle="buttons">
-                           <br/>
-                           <p>How would you prefer to be contacted?</p>
-                           <label class="btn btn-info btn-sm">
-                                <input type="radio"> Phone
-                           </label>
-                           <label class="btn btn-info btn-sm">
-                                <input type="radio"> Email
-                           </label>
-                           <label class="btn btn-info btn-sm">
-                                <input type="radio"> Either
-                           </label>
-                        </div>
-                     </div>
-                     <button type="reset" value="Reset" class="btn btn-danger">Reset</button>
-                  </form>
-                  <div id="message"></div>
-               </div>
-               <!-- Modal Footer -->
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-default" 
-                     data-dismiss="modal">Close
-                  </button>
-                  <button type="submit" id="sent-message" class="btn btn-primary">Send Email</button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end Modal -->
+                   
+<!-- Contact Modal-->
+    <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h4 class="modal-title" id="myModalLabel">Contact Me!</h4>
+		  </div>
+		  <div class="modal-body">
+			<img id="modalpic" src="assets/images/nintendoprofile_small.jpg"/>
+              <div id="modalBody" class="modal-body">
+                  <p>I'm excited to chat with you about some awesome GIS and coding projects.  <span class="glyphicon glyphicon-earphone"></span> +1 218.590.1330 </p>
+                  <div class="col-xs-6 col-md-6">
+                       <p>
+                         <a id="FB"  title="Share on Facebook" target="_blank" href="https://www.facebook.com/kimnesssundeen">
+                         <button id="fbbutton" type="button" class="btn btn-md" style="padding: 0 15px 0 0">			  
+                         <i class="fa fa-facebook fa-lg"></i></button>  Facebook 
+                         </a>
+                       </p>
+                       <p>
+                         <a href="https://twitter.com/ksundeen" target="=_blank">
+                         <button id="twbutton" type="button" class="btn btn-md" style="padding: 0 10px 0 0">
+                         <i class="fa fa-twitter fa-lg"></i></button>  Twitter
+                         </a>
+                       </p>
+                  </div><!-- end col for social media col 1-->
+                  <div class="col-xs-6 col-md-6">
+                        <p>
+                            <a href="https://www.linkedin.com/in/kim-sundeen-63007a16" target="_blank">
+                            <button id="libutton" type="button" class="btn btn-md" style="padding:0 10px 0 0">			    
+                            <i class="fa fa-linkedin fa-lg"></i></button>  LinkedIn
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:kim.h.sundeen@gmail.com?subject=I'm%20Interested!"><span class="glyphicon glyphicon-envelope"></span>  Email me!</a>
+                        </p>
+                        
+                  </div><!-- end col 2 -->
+           </div><!-- end id modalBody -->
+		  </div>
+        <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+		</div>
+	  </div>
+	</div><!-- end Contact Modal-->
+                   
       <footer class="container">
          <!-- space out with columns  md 3-2-2-4-1(pull-right)-->
          <div class="well">

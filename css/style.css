@@ -6,6 +6,17 @@
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
+
+#modalBody{
+ height: 150px;
+ margin-left: 160px;
+
+}
+
+#modalpic{
+ position: fixed;
+}
+
 .show-on-hover:hover > ul.dropdown-menu {
  display: block;  
  }
