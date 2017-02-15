@@ -22,15 +22,10 @@
     <div id="map"></div>
     <script>
       function initMap() {
-        var myLatLong = new google.maps.LatLng(46.8, -92.1);
-        var mapOptions = {
-            zoom: 12,
-            center: myLatLong,
-            mapTypeId: 'terrain'
-        };
-          
-        var map = new google.maps.Map(document.getElementById('map'),
-                                     mapOptions);
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: 46.8, lng: -92.1}, 
+        });
 
         var trafficLayer = new google.maps.TrafficLayer();
         trafficLayer.setMap(map);
