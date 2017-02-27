@@ -10,6 +10,10 @@ function showMap(){
     // Add OpenStreetMap basemap
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mymap);
     
+    // create a pane so that the markers show up above the state boundaries; referenced in the pointToLayer() function.
+    
+    mymap.createPane('markers');
+    mymap.getPane('markers').style.zIndex = 650;
 
     // Getting ajax data for states
     console.log("Getting state data");
@@ -169,7 +173,8 @@ function pointToLayer(feature, latlng, attributes) {
         color: "#000",
         weight: 1,
         opacity: 1,
-        fillOpacity: 0.8
+        fillOpacity: 0.8,
+        pane: 'markers'   //Added to tag to the pane option in the showMap() function
     };        
 
     // for each feature, determine its value for the selected attribute
