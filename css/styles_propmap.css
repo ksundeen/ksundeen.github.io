@@ -1,0 +1,74 @@
+/* Stylesheet by Kim Sundeen, 2017 */
+/* Used for scaling both maps on 1 page
+#osMapId, #bubblemanId { 
+    height: 200px; 
+}
+*/
+
+#schoolmap { 
+    height: 400px; 
+    width: 100%;
+    display: inline-block;
+    background-color: #bcbcbc;
+}
+
+.layerbutton {
+    padding: 5px;
+    background-color: orange;
+    color: black;
+    font-size: 15px;
+    font-family: "Roboto Slap", Corbel, sans-serif;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#titlebar {
+    height: auto;
+    width: 50%;
+    position: right;
+    top: 10px;
+    background-color: black;
+}
+
+#panel {
+    width: 26%;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 42px;
+}
+
+#sliderpanel {
+    width: 35%;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 42px;
+}
+
+.range-slider {
+    width: 50%;
+}
+
+#forward {
+    float: right;
+}
+
+#reverse {
+    float: left;
+}
+
+
+.leaflet-popup-content p {
+    margin: 0.2em 0; /* this didn't do anything */
+    line-height: 1.0; 
+}
+
+
