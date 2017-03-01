@@ -193,14 +193,13 @@ function pointToLayer(feature, latlng, attributes) {
     // create circle marker layer
     var layer = L.circleMarker(latlng, options);
     
-    // build popup content string
-    var panelContent = "<p><b>University: </b>" + feature.properties.university + "</p>";
-    
-    var year = attribute.split("_")[1];
-    panelContent += "<p><b>Enrollment in " + year + ": </b> " + feature.properties[attribute] + " students</p>";
-    
     // popupContent changed for hover tooltip
-    var popupContent = feature.properties.university;
+
+    var year = attribute.split("_")[1];
+    var popupContent = "<p><b><i>University: </i></b>" + feature.properties.university + "</p><p><b><i>Enrollment in " + year + ": </i></b> " + feature.properties[attribute] + " students</p>";
+    
+    var panelContent= panelContent;
+//    var popupContent = feature.properties.university;
 
     // bind the popup to the circle marker
     layer.bindPopup(popupContent, {
@@ -243,21 +242,29 @@ function updatePropSymbols(map, attribute) {
        // checks for existence of feature in layer & of a selected attribute in layer
        if (layer.feature && layer.feature.properties[attribute]) {
            // update layer style & popup   
-           // access feature properties
+            // access feature properties
+           sliderval = $('.range-slider').val();
+
+           // take value & access attribute text
+           var year = attribute[sliderval].split("_")[1];
+           
            var props = layer.feature.properties;
            
            // update each feature's radius based on new attribute vals
            var radius = calcPropRadius(props[attribute]);
            layer.setRadius(radius);
-           
-           console.log(radius);
-
-           // add "University" text to popup content string
-           var popupContent = "<p><b><i> University:</i></b> " + props.university + "</p>";
 
            // add formatted year value attribute to panel content string
-           var year = attribute.split("_")[1];
+           var year = attribute.split("_")[1];   
+           
+           // add "University" text to popup content string
+           var popupContent = "<p><b><i> University:</i></b> " + props.university + "</p><p><i><b>" + year +" Enrollment: </i></b>" + props[attribute] + "</p>";
+           
+           console.log("popupContent: ",popupContent);
 
+//           panelContent = "<p><b>Enrollment in " + year + ": </b> " + props[attribute] + " students</p>";            
+           panelContent = popupContent;
+           
            // Catches values with 0's or no values
            if ( isNaN(radius) || radius === 0 ) {
                console.log("found a NaN")
@@ -270,8 +277,15 @@ function updatePropSymbols(map, attribute) {
                layer.bindPopup(popupContent, {
                    offset: new L.Point(0,-radius)
                });
+                   
+               // add event listeners for on hover
+               layer.on({
+                    click: function() {
+                        $("#panel").html(panelContent);
+                    }
+                });                   
             };
-       };
+        };
     });
 };
 

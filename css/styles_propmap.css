@@ -67,8 +67,9 @@
 
 
 .leaflet-popup-content p {
-    margin: 0.2em 0; /* this didn't do anything */
-    line-height: 1.0; 
+    align-content: center;
+    margin: 1em 0; /* this didn't do anything */
+    line-height: 0.75; 
 }
 
 
