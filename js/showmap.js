@@ -29,7 +29,7 @@ function showMap(){
                 style: styleFeatures
 //                onEachFeature: onEachFeature  // can be used for adding interactivity to features
             }).addTo(mymap);
-            toggleLayer(mymap, stateGeojsonLayer);
+                toggleLayer(mymap, stateGeojsonLayer);
             }
     });
     
@@ -139,8 +139,6 @@ function processStateData(data) {
             attributes.push(attribute);
         }
     }
-    
-    console.log(attributes);
     return attributes;
 };
 
@@ -153,7 +151,7 @@ function processStateData(data) {
 // calculate the radius of each proportional symbol
 function calcPropRadius(attValue) {
     // Scale factor to adjust symbol size evenly
-    var scaleFactor = .01;
+    var scaleFactor = .015;
     // Area based on attribute value and scale factor
     var area = attValue * scaleFactor;
     // Radius calculated based on area
@@ -257,33 +255,39 @@ function createPopup(properties, attribute, layer, radius){
 function updatePropSymbols(map, attribute) {
     map.eachLayer(function(layer) {
        // checks for existence of feature in layer & of a selected attribute in layer
-       if (layer.feature && layer.feature.properties[attribute]) {
-           // update layer style & popup   
-            // access feature properties
-           sliderval = $('.range-slider').val();
+    if (layer.feature && layer.feature.properties[attribute]) {
+       // update layer style & popup   
+        // access feature properties
+        sliderval = $('.range-slider').val();
 
-           // take value & access attribute text
-           var year = attribute[sliderval].split("_")[1];
-           
-           var props = layer.feature.properties;
-           
-           // update each feature's radius based on new attribute vals
-           var radius = calcPropRadius(props[attribute]);
-           layer.setRadius(radius);
+        // take value & access attribute text
+        var year = attribute[sliderval].split("_")[1];
 
-           // add formatted year value attribute to panel content string
-           var year = attribute.split("_")[1];   
-           
-           // add "University" text to popup content string
-           var panelContent = "<p><b><i> University:</i></b> " + props.university + "</p><p><i><b>" + year +" Enrollment: </i></b>" + props[attribute] + "</p>";
-           
-           createPopup(props, attribute, layer, radius);
+        var props = layer.feature.properties;
 
-           // add event listeners for on hover
-           layer.on({
-                click: function() {
-                    $("#panel").html(panelContent);
-                }                   
+        // update each feature's radius based on new attribute vals
+        var radius = calcPropRadius(props[attribute]);
+        layer.setRadius(radius);
+
+        // add formatted year value attribute to panel content string
+        var year = attribute.split("_")[1];   
+
+        // add "University" text to popup content string
+        var panelContent = "<p><b><i> University:</i></b> " + props.university + "</p><p><i><b>" + year +" Enrollment: </i></b>" + props[attribute] + "</p>";
+
+        createPopup(props, attribute, layer, radius);
+        
+        // use of jquery to overwrite the content of the panel automatically without click
+        $("#panel").html(panelContent);
+
+        $('#temporal-legend').html(attribute);
+        getLegendInput(map, attribute);
+
+        // add event listeners for on hover
+        layer.on({
+            click: function() {
+                $("#panel").html(panelContent);
+            }                   
             });
         };
     });
@@ -373,17 +377,17 @@ function updatePropSymbols(map, attribute) {
 
 
 
-// Adds Year of attribute data as slider is clicked through sequence
-function addYearToSlider(map, attributes) {
-    // get value of slider range 
-    sliderval = $('.range-slider').val();
-    
-    // take value & access attribute text
-    var year = attributes[sliderval].split("_")[1];
-    
-    // append attribute to dom
-    $('#year').html(year + ' Enrollment');
-;}
+//// Adds Year of attribute data as slider is clicked through sequence
+//function addYearToSlider(map, attributes) {
+//    // get value of slider range 
+//    sliderval = $('.range-slider').val();
+//    
+//    // take value & access attribute text
+//    var year = attributes[sliderval].split("_")[1];
+//    
+//    // append attribute to dom
+//    $('#year').html(year + ' Enrollment');
+//;}
 
 // create sequence controls
 function createSequenceControls(map, attributes) {
@@ -443,8 +447,112 @@ function createSequenceControls(map, attributes) {
         // pass new attribute to update proportional symbol sizes
         updatePropSymbols(map, attributes[index]);
 
-        addYearToSlider(map, attributes[index]);
+        //addYearToSlider(map, attributes[index]);
     })
+};
+
+//Update the legend with new attribute
+function updateLegend(map, attribute){
+    //create content for legend
+    var year = attribute.split("_")[1];
+    var content = "Population in " + year;
+
+    //replace legend content
+    $('#temporal-legend').html(content);
+};
+
+function createLegend(map, attributes){
+    var LegendControl = L.Control.extend({
+        options: {
+            position: 'bottomright'
+        },
+
+        onAdd: function (map) {
+            // create the control container with a particular class name
+            var container = L.DomUtil.create('div', 'legend-control-container');
+            
+            $(container).append('<div id="temporal-legend">')
+
+            //Step 1: start attribute legend svg string
+            var svg = '<svg id="attribute-legend" width="120px" height="120px">';
+            
+            //array of circle names to base loop on
+            var circles = ["max", "mean", "min"];
+
+            //Step 2: loop to add each circle and text to svg string
+            for (var i=0; i<circles.length; i++){
+                //circle string
+                svg += '<circle class="legend-circle" id="' + circles[i] + 
+                '" fill="#25a7da" fill-opacity="0.8" stroke="#000000" cx="90"/>';
+            };
+
+            //close svg string
+            svg += "</svg>";
+
+            //add attribute legend svg to container
+            $(container).append(svg);
+
+            return container;
+        }
+    });
+    
+    map.addControl(new LegendControl());
+    getLegendInput(map, attributes[0]);
+    
+};
+
+function getLegendInput(map, attribute) {
+    // current_index = $('.range-slider').val();
+    var year = attribute.split("_")[1];
+    var content = "Population in " + year;
+    $('#temporal-legend').html(content);
+
+    var circleValues = getCircleValues(map, attribute);
+
+    for (var key in circleValues){
+        //get the radius
+        var radius = calcPropRadius(circleValues[key]);
+
+        //Step 3: assign the cy and r attributes
+        $('#'+key).attr({
+            cy: 63 - radius,
+            r: radius
+        });
+
+        $('#'+ key + '-text').text(Math.round(circleValues[key]*100)/100 + " feet");
+    };
+};
+
+function getCircleValues(map, attribute){
+    var min = Infinity,
+        max = -Infinity;
+
+    map.eachLayer(function(layer){
+        //get the attribute value
+        if (layer.feature){
+            var attributeValue = Number(layer.feature.properties[attribute]);
+
+            //test for min
+            if (attributeValue < min){
+                min = attributeValue;
+            };
+
+            //test for max
+            if (attributeValue > max){
+                max = attributeValue;
+            };
+        };
+    });
+
+    //set mean
+    var mean = (max + min) / 2;
+
+    //return values as an object
+    return {
+        max: max,
+        mean: mean,
+        min: min
+    };
 };
 
 // Builds attribute array for enrollment data
@@ -477,6 +585,7 @@ function getAjaxData(map){
             var attributes = processEnrollmentData(response);
             createPropSymbols(response, map, attributes);
             createSequenceControls(map, attributes);
+            createLegend(map, attributes);
         }
     });
 };
