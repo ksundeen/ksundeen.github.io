@@ -194,18 +194,12 @@ function pointToLayer(feature, latlng, attributes) {
     var layer = L.circleMarker(latlng, options);
     
     // popupContent changed for hover tooltip
+    createPopup(feature.properties, attribute, layer, options.radius);
 
-    var year = attribute.split("_")[1];
-    var popupContent = "<p><b><i>University: </i></b>" + feature.properties.university + "</p><p><b><i>Enrollment in " + year + ": </i></b> " + feature.properties[attribute] + " students</p>";
     
-    var panelContent= panelContent;
-//    var popupContent = feature.properties.university;
-
-    // bind the popup to the circle marker
-    layer.bindPopup(popupContent, {
-        offset: new L.Point(0,-options.radius),
-        closeButton: false
-    });
+    var year = attribute.split("_")[1];
+    var panelContent = "<p><b><i>University: </i></b>" + feature.properties.university + "</p><p><b><i>Enrollment in " + year + ": </i></b> " + feature.properties[attribute] + " students</p>";
+    
 
     // add event listeners for on hover
     layer.on({
@@ -235,6 +229,29 @@ function createPropSymbols(data, map, attributes) {
 };
 
 
+function createPopup(properties, attribute, layer, radius){
+    //add city to popup content string
+    var popupContent = "<p><b>University:</b> " + properties.university + "</p>";
+
+    //add formatted attribute to panel content string
+    var year = attribute.split("_")[1];
+    popupContent += "<p><b>Population in " + year + ":</b> " + properties[attribute] + "</p>";
+
+   // Catches values with 0's or no values
+   if ( isNaN(radius) || radius === 0 ) {
+       console.log("found a NaN")
+       // replace layer popup
+       layer.bindPopup(popupContent, {
+           offset: new L.Point(0,-5)
+       });
+   } else {        
+       // replace layer popup
+       layer.bindPopup(popupContent, {
+           offset: new L.Point(0,-radius)
+       });               
+    }
+};
+
 
 // Resize proportional symbols according to new attribute values
 function updatePropSymbols(map, attribute) {
@@ -258,36 +275,103 @@ function updatePropSymbols(map, attribute) {
            var year = attribute.split("_")[1];   
            
            // add "University" text to popup content string
-           var popupContent = "<p><b><i> University:</i></b> " + props.university + "</p><p><i><b>" + year +" Enrollment: </i></b>" + props[attribute] + "</p>";
+           var panelContent = "<p><b><i> University:</i></b> " + props.university + "</p><p><i><b>" + year +" Enrollment: </i></b>" + props[attribute] + "</p>";
            
-           console.log("popupContent: ",popupContent);
+           createPopup(props, attribute, layer, radius);
 
-//           panelContent = "<p><b>Enrollment in " + year + ": </b> " + props[attribute] + " students</p>";            
-           panelContent = popupContent;
-           
-           // Catches values with 0's or no values
-           if ( isNaN(radius) || radius === 0 ) {
-               console.log("found a NaN")
-               // replace layer popup
-               layer.bindPopup(popupContent, {
-                   offset: new L.Point(0,-5)
-               });
-           } else {        
-               // replace layer popup
-               layer.bindPopup(popupContent, {
-                   offset: new L.Point(0,-radius)
-               });
-                   
-               // add event listeners for on hover
-               layer.on({
-                    click: function() {
-                        $("#panel").html(panelContent);
-                    }
-                });                   
-            };
+           // add event listeners for on hover
+           layer.on({
+                click: function() {
+                    $("#panel").html(panelContent);
+                }                   
+            });
         };
     });
 };
+
+//Create new sequence controls
+//function createSequenceControls(map, attributes){   
+//    var SequenceControl = L.Control.extend({
+//        options: {
+//            position: 'bottomleft'
+//        },
+//
+//        onAdd: function (map) {
+//            // create the control container div with a particular class name
+//            var container = L.DomUtil.create('div', 'sequence-control-container');
+//
+//            //create range input element (slider)
+//            $(container).append('<input class="range-slider" type="range">');
+//            
+//            $(container).append('<button class="skip" id="reverse">Reverse</button>');
+//            $(container).append('<button class="skip" id="forward">Skip</button>');    
+//            $(container).html('<img src="img/reverse.png">');
+//            $(container).html('<img src="img/forward.png">');
+//
+//            // set slider attributes
+//            $('.range-slider').attr({
+//                max: 6,
+//                min: 0,
+//                value: 0,
+//                step: 1
+//            });
+//
+//
+//            // add click listener events for buttons
+//            $('.skip').click(function() {
+//                // get old index value
+//                var index = $('.range-slider').val();
+//
+//                // increment/decrement depending on button clicked
+//                if ($(this).attr('id') == 'forward') {
+//                    console.log(index)
+//                    index++;      
+//
+//                    // if passed last attribute, wrap to beginning again // shorthand if-else: "if index is greater than 6, return 0, else return index"
+//                    index = index > 6 ? 0 : index;    
+//
+//
+//                } else if ($(this).attr('id') == 'reverse') {         
+//                    index--;  
+//
+//                    // if passed last attribute, wrap to beginning again // shorthand if-else: "if index is less than 0, return 6, else return index"
+//                    index = index < 0 ? 6 : index;
+//                };
+//
+//                // update slider with value
+//                $('.range-slider').val(index);
+//
+//                // pass new attribute to update proportional symbol sizes
+//                updatePropSymbols(map, attributes[index]);          
+//
+//                // add year above slider
+//                addYearToSlider(map, attributes);
+//            });
+//
+//            // input listener for slider
+//            $('.range-slider').on('input', function() {
+//                // get new index value of sequence
+//                var index = $(this).val();
+//                console.log(index);
+//
+//                // pass new attribute to update proportional symbol sizes
+//                updatePropSymbols(map, attributes[index]);
+//
+//                addYearToSlider(map, attributes[index]);
+//            })
+//
+//            //kill any mouse event listeners on the map
+//            $(container).on('mousedown dblclick', function(e){
+//                L.DomEvent.stopPropagation(e);
+//            });
+//            return container;
+//        }
+//    });
+//    
+//    map.addControl(new SequenceControl());
+//};
+
+
 
 // Adds Year of attribute data as slider is clicked through sequence
 function addYearToSlider(map, attributes) {
