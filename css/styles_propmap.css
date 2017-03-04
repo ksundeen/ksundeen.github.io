@@ -92,11 +92,14 @@
 
 #temporal-legend {
     line-height: 20px;
+    font-size: 14px;
 }
 
+/*
 #attribute-legend {
-/*    position: absolute;*/
+    position: absolute;
     bottom: 5px;
     left: 0px;
 }
+*/
 
