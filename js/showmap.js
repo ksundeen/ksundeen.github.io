@@ -435,7 +435,7 @@ function createSequenceControls(map, attributes) {
         updatePropSymbols(map, attributes[index]);          
         
         // add year above slider
-        addYearToSlider(map, attributes);
+//        addYearToSlider(map, attributes);
     });
     
     // input listener for slider
