@@ -17,6 +17,12 @@
     <!--<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />-->
     <!-- local reference to awesome font-->
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+ 
 </head>
 
 <body>
@@ -52,7 +58,8 @@
                                         </div>
                                     </section>                                    
                                     
-                                    <!--===== Who You Are =======-->
+           <!--=============================== Who You Are =======================================-->
+                                    
                                     <section id="whoyouare">
                                         <hr>
                                         <h1>Who You Are</h1>
@@ -67,8 +74,19 @@
                                         <h3>What stage are you in your career?</h3>
                                         <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1325361860&amp;format=interactive"></iframe>
                                         <br>
-                                        <h3>In what city, state do you live?</h3>
-                                        <iframe width="809.5" height="480.13583333333327" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=519983853&amp;format=interactive"></iframe>
+                                        <hr />
+                                        <div class="row">                                       
+                                            <h2>Where We Are: Women in Tech (WiT)</h2>
+                                                <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=828935633&amp;format=interactive"></iframe>
+
+                                                <!--------- Leaflet cluster map ----------->
+                                                <br />
+                                            
+                                            <i>A cluster map showing where we all live. </i>
+                                            <div id="map" style="width: 600px; height: 475px; border: 1px solid #AAA;"></div> 
+                                            </div>
+                                            <!----------- end cluster map ------------->
+                                        <hr />
 
                                         <br>
                                         <h3>In what other professional groups/societies/meetups are you actively involved?</h3>
@@ -80,8 +98,10 @@
                                     <br>
                                     <p class="pull-right"><a href="#top">Back to top</a>
                                     </p>   
-                                    <br>                                    
-                                    <!--======== Topics =========-->
+                                    <br>   
+                                    
+                                    
+          <!--================================ Topics ===========================================-->
                                     <section id="topics">
                                         <hr />        
                                         <h1>Meeting Topics</h1>
@@ -95,7 +115,9 @@
                                     <br>
                                     <p class="pull-right"><a href="#top">Back to top</a>
                                     </p>
-                                    <!--============= Time & Locations ===============-->
+                                    
+                                    
+          <!--================================ Time & Locations ================================-->
                                     <section id="timelocations">
                                         <hr />
                                         <h1>Deciding When and Where to Meet</h1>
@@ -125,14 +147,14 @@
                                     <br>                                    
                                     <p class="pull-right"><a href="#top">Back to top</a>
                                     </p>
-                                    <!--============= Childcare Options ===============-->
+           <!--=================================== Childcare Options ===========================-->
                                     <section id="childcare">
                                         <hr />
                                         <h1>Childcare Options</h1>
                                         <hr />
 
                                         <h3>How many children do you have?</h3>
-                                        <iframe width="400" height="210" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubhtml?gid=1364033287&amp;single=true&amp;widget=true&amp;headers=false"></iframe>                                        
+                                        <iframe width="650" height="210" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubhtml?gid=1364033287&amp;single=true&amp;widget=true&amp;headers=false"></iframe>                                        
                                         <br>
                                         <h3>Are you interested in childcare options to help attend these meetings?</h3>
                                         <iframe width="685" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=728612959&amp;format=interactive"></iframe>
@@ -164,4 +186,13 @@
     </div>
 
 </body>
+    
+<!-- load external js -->
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>   
+    
+    // WiT locations for leaflet map
+    <script type='text/javascript' src='data/witlocations_20180408.js'></script> 
+    <script type='text/javascript' src='js/clustermap.js'></script>    
 </html>
