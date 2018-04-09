@@ -1,3 +1,4 @@
+// modified from https://asmaloney.com/2015/06/code/clustering-markers-on-leaflet-maps/
 var map = L.map( 'map', {
   center: [46.8, -92.1],
   minZoom: 2,
