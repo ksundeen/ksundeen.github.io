@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Women in Tech generalized survey results">
+    <meta name="author" content="Kim Sundeen">
+    <meta name="keywords" content="women, technology, meetup, groups">
+    <title>Kim Sundeen</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<!--    <link rel="stylesheet" href="css/stylebasic.css">-->
+    <!-- My css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />-->
+    <!-- local reference to awesome font-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" /> -->
+    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-0.7.7.css" />
+    <link rel="stylesheet" type="text/css" href="lib/Leaflet.markercluster-master/dist/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="lib/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
+ 
+</head>
+
+<body>
+    <div class="container">
+        
+            <!-- /top container -->
+    <div data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container">
+            <article id="article-middle" role="main" style="padding-top: 50px;">
+                <div class="about container">
+                    <div class="module module-article">
+                        <!--/ row contains all cv lists -->
+                        <div class="row">
+                            <!--Nav Bar Sidebar-->
+                            <nav class="col-xs-3 bs-docs-sidebar hidden-xs hidden-sm" id="scroll_navBar" role="navigation">
+                                <!-- <ul id="sidebar" class="nav nav-stacked fixed">	-->
+                                <ul class="nav nav-list affix" id="sidebar">
+                                    <li><a href="#whoyouare">Who You Are</a>
+                                    </li>
+                                    <li><a href="#topics">Topics for Meetings</a>
+                                    </li>
+                                    <li><a href="#timelocations">Time &amp; Locations</a>
+                                    </li>
+                                    <li><a href="#childcare">Childcare Options</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="row col-md-9" style="padding-top: 10px;">
+                                <div class=".col-md-8">
+                                    <section id="overview">
+                                        <div class="page-header">
+                                            <h1>Survey Results: Women in Tech (WiT) |<small> generalized responses (April 2018)</small></h1>
+                                            <h2>WiT's Mission: To inspire and engage more women in all ages and career stages in topics of professional development related to technology. More specifically, we aim to 1) network with fellow women in technology fields, 2) provide a supportive environment for learning, creativity, mentorship, and professional development, and 3) discuss new initiatives, jobs, and ideas for how to retain our talent locally.</h2>
+                                            <h3><i>**The survey are still open, but survey administrator reviews all responses to generalize them prior to publishing in this results webpage.</i></h3>
+                                        </div>
+                                    </section>                                    
+                                    
+           <!--=============================== Who You Are =======================================-->
+                                    
+                                    <section id="whoyouare">
+
+                                        <br>
+                                        <hr />
+                                        <div class="row">                                       
+ 
+                                                <!--------- Leaflet cluster map ----------->
+                                            
+                                            <i>A cluster map showing where we all live. </i>
+                                            <!-- example cluster map from https://asmaloney.com/2015/06/code/clustering-markers-on-leaflet-maps/ -->
+                                            <div id="map" style="width: 600px; height: 475px; border: 1px solid #AAA;"></div> 
+                                            </div>
+                                            <!----------- end cluster map ------------->
+                                        <hr />
+
+                                        <br>                                            
+   
+                                    </section>
+                                                               
+                                </div>
+                            </div>
+                            <!--content-->
+                        </div>
+                        <!-- row -->
+                    </div>
+                    <!--module-->
+                </div>
+                <!--container-->
+            </article>
+        </div>
+        <!-- bottom container -->
+    </div>
+
+    </div>
+
+</body>
+    
+<!-- load external js -->
+<!--    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>-->
+    <script type='text/javascript' src='lib/jquery-2.1.4.min.js'></script>
+    
+<!--    <script type='text/javascript' src='https://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>-->
+    <script type='text/javascript' src='lib/leaflet/leaflet-0.7.7.js'></script>    
+<!--    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>   -->
+    <script type='text/javascript' src='lib/Leaflet.markercluster-master/src/leaflet.markercluster-0.4.0.js'></script>    
+    
+    // WiT locations for leaflet map
+    <script type='text/javascript' src='data/gardens.js'></script> 
+    <script type='text/javascript' src='js/clustermap.js'></script>    
+</html>
