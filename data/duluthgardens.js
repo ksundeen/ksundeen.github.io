@@ -1,0 +1,23 @@
+var markers = [
+    { "id": 1, "gardenlocation": "Cook Home: 2716 W Arrowhead Rd,Duluth, MN, 55811", "latitude": 46.821659, "longitude": -92.122786 },
+    { "id": 2, "gardenlocation": "Hannah House: 1701 Jefferson St,Duluth, MN, 55812", "latitude": 46.802657, "longitude": -92.075621 },
+    { "id": 3, "gardenlocation": "Chester Creek: 1425 E 9th St, Duluth,MN, 55805", "latitude": 46.807131, "longitude": -92.0896 },
+    { "id": 4, "gardenlocation": "Stoney Ground: 1031 E 7th St, Duluth,MN, 55805", "latitude": 46.802169, "longitude": -92.092346 },
+    { "id": 5, "gardenlocation": "Georgia's: 827 E 8th St, Duluth, MN, 55805", "latitude": 46.801019, "longitude": -92.096202 },
+    { "id": 6, "gardenlocation": "Sixth Street: 724 E 6th St, Duluth, MN, 55805", "latitude": 46.798558, "longitude": -92.095166 },
+    { "id": 7, "gardenlocation": "Fourth Street: 419 East 4th St, Duluth, MN, 55805", "latitude": 46.794382, "longitude": -92.097147 },
+    { "id": 8, "gardenlocation": "Lilliput: 321 E 5th St, Duluth, MN, 55805", "latitude": 46.793946, "longitude": -92.099606 },
+    { "id": 9, "gardenlocation": "Bertha's: 323 E 7th St, Duluth, MN, 55805", "latitude": 46.795383, "longitude": -92.101323 },
+    { "id": 10, "gardenlocation": "Hillside: 306 E 8th St, Duluth, MN, 55805", "latitude": 46.795539, "longitude": -92.1035411 },
+    { "id": 11, "gardenlocation": "Strawberry Hill: 219 W 6th St, Duluth, MN, 55806", "latitude": 46.788797, "longitude": -92.107781 },
+    { "id": 12, "gardenlocation": "Duluth Community Gardens Program: 206 W 4th St,Duluth,MN,55806", "latitude": 46.787332, "longitude": -92.105205 },
+    { "id": 13, "gardenlocation": "Rooftop: 401 W 2nd St, Duluth, MN, 55802", "latitude": 46.784126, "longitude": -92.106894 },
+    { "id": 14, "gardenlocation": "Rocky Ledge: 701 W 5th St, Duluth, MN, 55806", "latitude": 46.783825, "longitude": -92.112269 },
+    { "id": 15, "gardenlocation": "Fox Hole: 916 W 6th St, Duluth, MN, 55806", "latitude": 46.782126, "longitude": -92.116674 },
+    { "id": 16, "gardenlocation": "Emerson: 1103 W 3rd St, Duluth, MN, 55806", "latitude": 46.778741, "longitude": -92.115638 },
+    { "id": 17, "gardenlocation": "Emerald: 2001 W 4th St, Duluth, MN, 55806", "latitude": 46.770775, "longitude": -92.127428 },
+    { "id": 18, "gardenlocation": "Harrison: 3000 W 3rd St, Duluth, MN, 55806", "latitude": 46.760249, "longitude": -92.137611 },
+    { "id": 19, "gardenlocation": "Denfeld Food Forest: 4441 Grand Ave, Duluth, MN, 55807", "latitude": 46.747113, "longitude": -92.158307 },
+    { "id": 20, "gardenlocation": "Apple Tree Circle: 527 S 72nd Ave W, Duluth, MN, 55807", "latitude": 46.726616, "longitude": -92.189407 },
+    { "id": 21, "gardenlocation": "Riverside: 28 Riverside Dr, Duluth, MN, 55808", "latitude": 46.710433, "longitude": -92.206392 }
+]
