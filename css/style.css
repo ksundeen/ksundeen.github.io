@@ -4,30 +4,40 @@
 
 * {
     font-family: Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    color: rgb(216, 212, 212);
 }
 
 
 #modalBody{
- height: 150px;
- margin-left: 160px;
+    height: 150px;
+    margin-left: 160px;
 
+}
+
+.modal-icon {
+    padding: 0px 0px 0px 0px;
 }
 
 #modalpic{
- position: fixed;
+    position: fixed;
 }
 
-.show-on-hover:hover > ul.dropdown-menu {
- display: block;  
+.show-on-hover:hover > ul.dropdown-menu {   
+    display: block;  
  }
  
 body {
- background-color: #e0ebfc;
+
+ /* background-color: #e0ebfc; */
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: cover; */
  }
  
 .shadow {
- text-shadow: black 0.1em 0.1em 0.2em;
- font-weight: bold; 
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-weight: bold; 
 }
 
 .diffcolor {
