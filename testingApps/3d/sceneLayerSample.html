@@ -1,77 +1,123 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>Intro to SceneLayer - 4.9</title>
-  <style>
-    html,
-    body,
-    #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>3D Demo Fun</title>
+    <style>
+      html, body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 96%;
+        width: 100%;
+      }
+      #panel {
+        -moz-box-align: baseline;
+        padding: 5px;
+        text-align: center;
+        color: #1c691c;
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      #elevationDiv {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        padding: 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+    </style>
 
-  <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
-  <script src="https://js.arcgis.com/4.9/"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.9/"></script>
 
-  <script>
-    require([
-      "esri/Map",
-      "esri/views/SceneView",
-      "esri/layers/SceneLayer"
-    ], function(Map, SceneView, SceneLayer) {
+    <script>
+      require([
+        "esri/Map",
+        "esri/views/SceneView",
+        "esri/layers/SceneLayer",
+        // "esri/geometry/Point"
+        // "esri/ViewPoint"
+      ], function(
+        Map, 
+        // Point,
+        // ViewPoint,
+        SceneView, 
+        SceneLayer,
+        ) {
 
-      // Create Map
-      var map = new Map({
-        basemap: "dark-gray",
-        ground: "world-elevation"
-      });
+        // Creating starting point
+        // var point = new Point({
+        //   longitude: 
+        // })
 
-      // Create the SceneView
-      var view = new SceneView({
-        container: "viewDiv",
-        map: map,
-        camera: {
-          position: [-74.0338, 40.6913, 707],
-          tilt: 81,
-          heading: 50
-        }
-      });
+        // Create Map
+        var map = new Map({
+          basemap: "hybrid",
+          ground: "world-elevation"
+        });
 
-      // Create SceneLayer and add to the map
-      var sceneLayer = new SceneLayer({
-        portalItem: {
-          id: "2e0761b9a4274b8db52c4bf34356911e"
-        },
-        popupEnabled: true
-      });
-      map.add(sceneLayer);
-
-      // Create MeshSymbol3D for symbolizing SceneLayer
-      var symbol = {
-        type: "mesh-3d", // autocasts as new MeshSymbol3D()
-        symbolLayers: [{
-          type: "fill", // autocasts as new FillSymbol3DLayer()
-          // If the value of material is not assigned, the default color will be grey
-          material: {
-            color: [244, 247, 134]
+        // Create the SceneView
+        var view = new SceneView({
+          container: "viewDiv",
+          map: map,
+          camera: {
+            position: [-74.0338, 40.6913, 707],
+            tilt: 81,
+            heading: 50
           }
-        }]
-      };
-      // Add the renderer to sceneLayer
-      sceneLayer.renderer = {
-        type: "simple", // autocasts as new SimpleRenderer()
-        symbol: symbol
-      };
-    });
-  </script>
-</head>
+        });
 
-<body>
-  <div id="viewDiv"></div>
-</body>
-</html>
+        // Adding event listener logic for toggling elevation
+        view.when(function() {
+          document.getElementById("elevationInput").addEventListener("change", updateElevation);
+
+          function updateElevation(ev) {
+            // Turn ground layers visibility on/off
+            map.ground.layers.forEach(function(layer) {
+              layer.visible = ev.target.checked;
+            });
+          }
+        });        
+
+        // Create SceneLayer and add to the map
+        var sceneLayer = new SceneLayer({
+          portalItem: {
+            id: "2e0761b9a4274b8db52c4bf34356911e"
+          },
+          popupEnabled: true
+        });
+        map.add(sceneLayer);
+
+        // Create MeshSymbol3D for symbolizing SceneLayer
+        var symbol = {
+          type: "mesh-3d", // autocasts as new MeshSymbol3D()
+          symbolLayers: [{
+            type: "fill", // autocasts as new FillSymbol3DLayer()
+            // If the v-alue of material is not assigned, the default color will be grey
+            material: {
+              color: [244, 247, 134]
+            }
+          }]
+        };
+        // Add the renderer to sceneLayer
+        sceneLayer.renderer = {
+          type: "simple", // autocasts as new SimpleRenderer()
+          symbol: symbol
+        };
+      });
+    </script>
+  </head>
+
+  <body>
+    <p id="panel">3D Demo & Elevation Funnnn</p>
+    <div id="viewDiv"></div>
+    <div id="elevationDiv">
+        <label>Elevation:
+          <input id="elevationInput" type="checkbox" checked>
+        </label>
+      </div>    
+  </body>
+</html> 
