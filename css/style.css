@@ -2,16 +2,18 @@
     color: black;
 }
 
-* {
-    font-family: Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+body {
     color: rgb(216, 212, 212);
 }
 
+h1, h2, h3 {
+    font-family:  'Indie Flower', cursive;
+}
 
 #modalBody{
     height: 150px;
     margin-left: 160px;
-
+    
 }
 
 .modal-icon {
@@ -24,11 +26,11 @@
 
 .show-on-hover:hover > ul.dropdown-menu {   
     display: block;  
- }
- 
-body {
+}
 
- /* background-color: #e0ebfc; */
+body {
+    /* background-color: #e0ebfc; */
+    font-family: Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
     background-image: url("../img/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
