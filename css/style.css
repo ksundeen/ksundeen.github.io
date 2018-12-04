@@ -3,21 +3,29 @@
 }
 
 body {
-    color: rgb(216, 212, 212);
+    color: rgb(36, 32, 32);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family:  'Indie Flower', cursive;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.box {
+    background-color: #E0E0E0;
 }
 
 #modalBody{
     height: 150px;
-    margin-left: 160px;
-    
+    margin-left: 160px;    
 }
 
 .modal-icon {
     padding: 0px 0px 0px 0px;
+    color: #337ab7; 
 }
 
 #modalpic{
@@ -27,13 +35,15 @@ h1, h2, h3 {
 .show-on-hover:hover > ul.dropdown-menu {   
     display: block;  
 }
+.modal-content{
+    background-color: #F5F5F5;
+}
 
 body {
-    /* background-color: #e0ebfc; */
+    background-color: #F5F5F5;
     font-family: Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    background-image: url("../img/background.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-image: url("../img/background.jpg");
+    background-repeat: no-repeat; */
     /* background-size: cover; */
  }
  
