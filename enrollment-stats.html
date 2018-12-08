@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -5,12 +6,14 @@
 		<meta name="viewport" content="width=device-width">
 		<title>University Enrollment</title>
 
-		<!--put your external stylesheet links here-->
+        <!--put your external stylesheet links here-->
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="css/styles_propmap.css">
         <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
         <link rel="stylesheet" type="text/css" href="lib/Leaflet.markercluster-master/dist/MarkerCluster.css">
         <link rel="stylesheet" type="text/css" href="lib/Leaflet.markercluster-master/dist/MarkerCluster.Default.css">
-        
+            <!-- My css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 		<!--[if IE<9]>
 			<link rel="stylesheet" href="css/styles.ie.css">
 		<![endif]-->
@@ -18,12 +21,12 @@
 
 	<body>
 		<!--put your initial page content here-->
-        <p id="myheader">
-            <h2>University Enrollment</h2>
+        <div id="myheader">
+            <h1>University Enrollment</h1>
             <div>Published undergraduate 2 and 4-year university enrollment numbers for universities with >10,000 students enrolled. Data originated from a survey completed by 
                 <a href="https://nces.ed.gov/programs/digest/d15/tables/dt15_312.20.asp?current=yes" target="_blank">National Center for Education Statistics (NCES)</a> for years 1990-2014. **Only select Big 10 University enrollment numbers were included for years 2015 and 2016. More enrollment numbers will be included as statistics become available.
             </div>
-        </p>
+        </div>
 
 <!--Adding the inline CSS style made the map draw, which proved that something was going wrong with the CSS. When I changed the stylesheet to "styles.css" it worked. Something else must have been accessing "style.css"-->
 <!--        <div id="mapid" style="height: 300px;">Web Map Goes Here</div>--> 
