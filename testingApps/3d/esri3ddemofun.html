@@ -18,7 +18,7 @@
         text-align: center;
         color: #1c691c;
         font-size: 30px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
       }
       #elevationDiv {
         position: absolute;
@@ -28,8 +28,18 @@
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
       }
+      #bookmarks {
+        position: absolute;
+        top: 65px;
+        right: 12px;
+        padding: 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+      }
     </style>
 
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"> 
     <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
     <script src="https://js.arcgis.com/4.9/"></script>
 
@@ -38,6 +48,8 @@
         "esri/Map",
         "esri/views/SceneView",
         "esri/layers/SceneLayer",
+        "esri/layers/FeatureLayer",
+        "dojo/domReady!"
         // "esri/geometry/Point"
         // "esri/ViewPoint"
       ], function(
@@ -46,6 +58,7 @@
         // ViewPoint,
         SceneView, 
         SceneLayer,
+        FeatureLayer
         ) {
 
         // Creating starting point
@@ -58,6 +71,12 @@
           basemap: "hybrid",
           ground: "world-elevation"
         });
+
+        // Create FeatureLayer
+        var featureLayer = new FeatureLayer({
+          url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer"
+        });
+        map.add(featureLayer);
 
         // Create the SceneView
         var view = new SceneView({
@@ -80,7 +99,35 @@
               layer.visible = ev.target.checked;
             });
           }
-        });        
+        });     
+
+        // Add Bookmark toggle to zoom to different regions
+        view.when(function() {
+          document.getElementById("newyork").addEventListener("change", zoomToBookmark);
+
+          function zoomToBookmark(ev) {
+            // Turn ground layers visibility on/off
+              view.goTo({
+                position: [-74.0338, 40.6913, 707], 
+                tilt: 81, 
+                heading: 50
+              })
+          }
+        });
+
+        // Add Bookmark toggle to zoom to different regions
+        view.when(function() {
+          document.getElementById("california").addEventListener("change", zoomToBookmark);
+
+          function zoomToBookmark(ev) {
+            // Turn ground layers visibility on/off
+              view.goTo({
+                position: [-118.71511, 33.78, 35000], // x, y, z
+                tilt: 45, // looking from bird's eye view
+                heading: 0 // looking straight north
+              })
+          }
+        });
 
         // Create SceneLayer and add to the map
         var sceneLayer = new SceneLayer({
@@ -112,12 +159,23 @@
   </head>
 
   <body>
-    <p id="panel">3D Demo & Elevation Funnnn</p>
+    <h1 id="panel">3D Demo &amp; Elevation Funnnn</h1>
     <div id="viewDiv"></div>
-    <div id="elevationDiv">
-        <label>Elevation:
-          <input id="elevationInput" type="checkbox" checked>
-        </label>
-      </div>    
+      <div id="elevationDiv">
+          <label>Elevation:
+            <input id="elevationInput" type="checkbox" checked>
+          </label>
+      </div> 
+      <div id="bookmarks">   
+        <p>Bookmarks:</p>
+        <div>
+          <input id="newyork" type="radio" name="bookmarkoptions" checked>
+          <label for="newyork">New York Buildings (Portal Item, SceneLayer)</label>
+        </div>
+        <div>
+          <input id="california" type="radio" name="bookmarkoptions">
+          <label for="california">California Trails (FeaturerLayer)</label>
+        </div>
+      </div>
   </body>
 </html> 
