@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Adding Point to 2D MapView</title>
+
+	<link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+	<script src="https://js.arcgis.com/4.9/"></script>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"> 
+	<link rel="stylesheet" type="text/css" href="../../css/mapstyle.css">
+
+	<script>
+		var myMap, myMapView;
+		require([
+			"esri/Map",
+			"esri/Graphic",
+			"esri/geometry/Point",
+			"esri/symbols/SimpleMarkerSymbol",
+			"esri/views/MapView",
+			"dojo/domReady!"
+		],
+		function(
+			Map,
+			Graphic,
+			Point,
+			SimpleMarkerSymbol,
+			MapView
+		) {
+		
+			map = new Map({
+				basemap: "hybrid" // satellite, hybrid, topo, gray, dark-gray, oceans, osm, national-geographic
+			});
+			
+			mapView = new MapView({
+				container: "mapview",
+				map: map,
+				center: [-92, 46.75], // Duluth
+				zoom: 8
+			});
+			
+			mapView.on("click", function(evt) {
+				evt.stopPropagation(); // overwrite default click-for-popup behavior
+
+				// mapView.graphics.removeAll(); //enable to delete them
+				
+				var lat = Math.round(evt.mapPoint.latitude * 1000) / 1000;
+				var long = Math.round(evt.mapPoint.longitude * 1000) / 1000;
+
+				mapView.popup.open({
+					title: "Your Clicked Coordinates:",  
+					// location: "lat: "+ evt.mapPoint.latitude.toString() + " " + "long: "+ evt.mapPoint.longitude.toString()	
+					location: evt.mapPoint,
+					content: "Latitude: "+ lat + " " + "Longitude: "+ long
+				});
+			});	
+
+			mapView.on("click", function(evt) {
+				evt.stopPropagation(); // overwrite default click-for-popup behavior
+
+				// mapView.graphics.removeAll(); //enable to delete them
+				
+				var lat = Math.round(evt.mapPoint.latitude * 1000) / 1000;
+				var long = Math.round(evt.mapPoint.longitude * 1000) / 1000;
+
+				mapView.popup.open({
+					title: "Your Clicked Coordinates:",  
+					// location: "lat: "+ evt.mapPoint.latitude.toString() + " " + "long: "+ evt.mapPoint.longitude.toString()	
+					location: evt.mapPoint,
+					content: "Latitude: "+ lat + " " + "Longitude: "+ long
+				});
+			});	
+
+				
+				// var point = evt.mapPoint;
+				// var markerSymbol = new SimpleMarkerSymbol({
+				// 	size: 18,
+				// 	color: [184, 4, 84],
+				// 	outline: {
+				// 		color: [219, 219, 219],
+				// 		width: 3
+				// 	}
+				// });
+				// var graphic = new Graphic({
+				// 	geometry: point,
+				// 	symbol: markerSymbol
+				// });
+				// mapView.graphics.add(graphic);
+
+		});
+	</script>
+
+</head>
+
+	<body>
+		<h1 id="panel">2D Demo: Adding a Point to a MapView</h1>
+		<div id="mapview"></div> 
+		<div id="instruction">Click any location on the map to see its street address</div>
+  	</body>
+</html> 

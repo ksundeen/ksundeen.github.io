@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>3D Demo Fun</title>
-    <style>
+    <!-- <style>
       html, body,
       #viewDiv {
         padding: 0;
@@ -38,11 +38,12 @@
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
       }
-    </style>
+    </style> -->
 
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="../../css/style.css"> 
     <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mapstyle.css">
     <script src="https://js.arcgis.com/4.9/"></script>
 
     <script>
@@ -51,6 +52,7 @@
         "esri/views/SceneView",
         "esri/layers/SceneLayer",
         "esri/layers/FeatureLayer",
+        "esri/widgets/Bookmarks",
         "dojo/domReady!"
         // "esri/geometry/Point"
         // "esri/ViewPoint"
@@ -60,7 +62,8 @@
         // ViewPoint,
         SceneView, 
         SceneLayer,
-        FeatureLayer
+        FeatureLayer,
+        Bookmarks
         ) {
 
         // Creating starting point
@@ -82,7 +85,7 @@
 
         // Create the SceneView
         var view = new SceneView({
-          container: "viewDiv",
+          container: "sceneView",
           map: map,
           camera: {
             position: [-74.0338, 40.6913, 707],
@@ -162,7 +165,7 @@
 
   <body>
     <h1 id="panel">3D Demo &amp; Elevation Funnnn</h1>
-    <div id="viewDiv"></div>
+    <div id="sceneView"></div>
       <div id="elevationDiv">
           <label>Elevation:
             <input id="elevationInput" type="checkbox" checked>

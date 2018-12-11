@@ -1,0 +1,45 @@
+html, body, #sceneView, #mapview {
+        padding: 0;
+        margin: 0;
+        height: 96%;
+        width: 100%;
+      }
+#panel {
+  -moz-box-align: baseline;
+  padding: 5px;
+  text-align: center;
+  color: #1c691c;
+  font-size: 30px;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+}
+#elevationDiv {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#bookmarks {
+  position: absolute;
+  top: 65px;
+  right: 12px;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#instruction {
+  z-index: 99;
+  position: absolute;
+  border-radius: 5px;
+  top: 100px;
+  left: 50%;
+  padding: 5px;
+  margin-left: -175px;
+  height: 20px;
+  width: 350px;
+  background: rgba(25, 25, 25, 0.8);
+  color: white;
+}
