@@ -1,21 +1,27 @@
+@font-face {
+	font-family: nunito;
+	src: url(./fonts/Nunito-Regular.ttf);
+}
+
 #carousel-slide {
     color: black;
 }
 
 body {
-    color: rgb(36, 32, 32);
+    color: #0b0b0c;
 }
 
 .header-text {
     font-weight: bold;
 }
 
-h1, h2, h3, h4, header {
+h1, h2, h3, h4, .header {
     font-family:  'Indie Flower', cursive;
 }
 
 img {
     border-radius: 5px;
+    box-shadow: 1px 1px 10px #0b0b0c;
 }
 
 .box {
@@ -23,24 +29,32 @@ img {
 }
 
 #modalBody{
-    height: 150px;
-    margin-left: 160px;    
+    height: 75px;
+    /* margin-left: 160px;     */
 }
 
 .modal-icon {
     padding: 0px 0px 0px 0px;
-    color: #337ab7; 
+    color: #337ab7; /*#0b0b0c; */
+    height: 40px;
+    width: 40px;
 }
-
+.modal-body {
+    padding: 20px 20px 20px 20px;
+}
 #modalpic{
-    position: fixed;
+    margin: 20px 20px 20px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
 }
 
-.show-on-hover:hover > ul.dropdown-menu {   
-    display: block;  
-}
 .modal-content{
     background-color: #F5F5F5;
+}
+.show-on-hover:hover > ul.dropdown-menu {   
+    display: block;  
 }
 
 body {
@@ -51,6 +65,9 @@ body {
     /* background-size: cover; */
  }
  
+ .well {
+     background-color: #0b0b0c;
+ }
 .shadow {
     text-shadow: black 0.1em 0.1em 0.2em;
     font-weight: bold; 
@@ -66,13 +83,13 @@ h2 {
  padding-top: 2cm;
 }
 
-.modal-body {
- padding: 20px 20px 20px 20px;
-}
-
 .center {
     margin: auto;
     width: 50%;
     padding: 10px;
+    text-align: center;
 }
 
+.center-text {
+    text-align: center;
+}
