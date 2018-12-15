@@ -1,10 +1,6 @@
-@font-face {
-	font-family: nunito;
-	src: url(./fonts/Nunito-Regular.ttf);
-}
-
 #carousel-slide {
     color: black;
+    height: 375px;
 }
 
 body {
@@ -92,4 +88,5 @@ h2 {
 
 .center-text {
     text-align: center;
+    align-content: center;
 }
