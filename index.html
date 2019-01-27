@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Kim Sundeen's web portfolio. Contains maps and apps created by Kim along with her resume and contact information.">
     <meta name="author" content="Kim Sundeen">
-    <meta name="keywords" content="Kim, GIS, Developer, GIS analyst, Cartographer">
+    <meta name="keywords" content="Kim, GIS, Developer, GIS Analyst, Cartographer">
 	<title>Kim Sundeen</title>
     
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
@@ -16,6 +16,7 @@
 	<link href="css/font-awesome.min.css" rel="stylesheet" />
 	<!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />-->
     <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="css/style_charts.css"> 
 	
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -31,8 +32,10 @@
 
       ga('create', 'UA-88367987-1', 'auto');
       ga('send', 'pageview');
-
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+
 </head>
 <body>
       <!-- Google Tag Manager -->
@@ -178,6 +181,33 @@
 <p></p>
 
 <p></p>
+<!--container-- for Skill Graphs-->
+<div class="container">
+    <h1 class="center-text">Technical Expertise</h1>
+    <h4 class="center-text">0 = Working Knowledge to 10 = Expert</h4>
+    <div class="row">
+        <div class="col-sm-3">  
+            <div class="chart-container">
+                <canvas id="devChart" width="50" height="50"></canvas>
+            </div>
+        </div>
+        <div class="col-sm-3">  
+            <div class="chart-container">
+                <canvas id="geoDevChart" width="50" height="50"></canvas>
+            </div>        
+        </div>                
+        <div class="col-sm-3">  
+            <div class="chart-container">
+                <canvas id="dbChart" width="50" height="50"></canvas>
+            </div>
+        </div>
+        <div class="col-sm-3">  
+            <div class="chart-container">
+                <canvas id="gisAppsChart" width="50" height="50"></canvas>
+            </div>        
+        </div>   
+</div>
+<!--end container Skill Set Graphs-->
 
 <div class="container">
     <div class="row">
@@ -213,8 +243,7 @@
         </div>
     </div>
 </div>
-<!--container-- for columns-->
-    
+
 
 <!-- Contact Modal-->
 <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -283,4 +312,6 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/scrollspy.js"></script>      
    
     </body>
+    <script type="text/javascript" src="js/chart_skills.js"></script>
+
 </html>
