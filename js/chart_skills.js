@@ -10,7 +10,7 @@ var devData = {
 }
 
 var geoData = {
-    labels: ["ArcPy Python", "Esri JavaScript API 3.x", "Leaflet API", "D3", ".NET Customization ArcGIS/ArcPro", "Google Maps API", "GDAL", "Esri JavaScript API 4.x", "Spatial R", "Mapbox API"],
+    labels: ["ArcPy Python", "Esri JavaScript API 3.x", "Leaflet API", "D3", ".NET GIS Customization", "Google Maps API", "GDAL", "Esri JavaScript API 4.x", "Spatial R", "Mapbox API"],
     datasets: [{
         label: 'Geo Dev',
         data: [10,7,5,5,5,4,4,4,4,3],
@@ -21,10 +21,10 @@ var geoData = {
 }
 
 var dbData = {
-    labels: ["ArcGIS Server", "MS Excel Customization", "SQL/PLSQL", "MySQL", "Postgresql", "ArcSDE using MySQL", "Postgresql, Oracle", "R Regression"],
+    labels: ["MS Excel Customization", "ArcGIS Server", "ArcSDE/PostGIS", "SQL/PLSQL", "MySQL", "PostgreSQL", "Oracle", "R Regression"],
     datasets: [{
         label: 'Data Access/Analytics',
-        data: [10,10,9,9,9,8,8,5],
+        data: [10,9,8,8,8,7,7,6],
         backgroundColor: 'rgba(198, 131, 13, 0.5)',
         borderColor: "rgb(198, 131, 13)",
         borderWidth: 1,
