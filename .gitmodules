@@ -1,0 +1,3 @@
+[submodule "smallgroupmap"]
+	path = smallgroupmap
+	url = https://github.com/ksundeen/smallgroupmap.git
