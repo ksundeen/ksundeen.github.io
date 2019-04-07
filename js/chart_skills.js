@@ -1,5 +1,5 @@
 var devData = {
-    labels: ["Python APIs", "Source Control", "Bootstrap", "JavaScript", "Angular/Typescript", "jQuery", "VM Architecture-Azure/AWS", "UX", "Node.js", ".NET C#"],
+    labels: ["Python APIs", "Source Control", "Bootstrap", "JavaScript", "Angular/Typescript", "jQuery", "VM DevOps-Azure/AWS", "UX", "Node.js", ".NET C#"],
     datasets: [{
         label: 'Dev',
         data: [9,8,8,8,7,7,6,6,6,6],
@@ -21,7 +21,7 @@ var geoData = {
 }
 
 var dbData = {
-    labels: ["MS Excel Customization", "ArcGIS Server", "ArcSDE/PostGIS", "PostgreSQL", "SQL/PLSQL", "SQL Server/IIS/WAMP/LAMP", "Oracle", "R Regression"],
+    labels: ["MS Excel Customization", "ArcGIS Server", "ArcSDE/PostGIS", "PostgreSQL", "SQL/PLSQL", "Web Servers", "Oracle", "R Regression"],
     datasets: [{
         label: 'Data Access/Analytics',
         data: [10,10,9,8,7,7,7,6],
