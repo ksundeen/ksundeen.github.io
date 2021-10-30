@@ -1,8 +1,8 @@
 var devData = {
-    labels: ["React", "Python APIs", "JavaScript", "Source Control", "UI/UX Frameworks", "Angular/Typescript", "jQuery", ".NET C#", "IIS", "VM DevOps-Azure/AWS", "Node.js", ],
+    labels: ["Python APIs", "JavaScript", "Source Control", ".NET C#", "React", "UI/UX Frameworks", "Angular/Typescript", "VM DevOps-Azure/AWS", "IIS", "jQuery", "IIS", "Node.js"],
     datasets: [{
         label: 'Dev',
-        data: [9,8,8,8,8,7,7,6,6,6,6],
+        data: [9,8,8,8,8,7,7,6,6,6,4],
         backgroundColor: 'rgba(66, 134, 244, 0.5)',
         borderColor: "rgb(66, 134, 244)",
         borderWidth: 1,
@@ -10,10 +10,10 @@ var devData = {
 }
 
 var geoData = {
-    labels: ["Open Layers", "ArcPy Python", "Esri JavaScript API 3.x", "Leaflet API", "D3", "Google Maps API", ".NET GIS", "GDAL", "Esri JavaScript API 4.x", "Mapbox API", "Spatial R"],
+    labels: ["Pro SDK Addins", "ArcPy Python", "Open Layers", "Esri JavaScript API 3.x", "Leaflet API", "D3", "Google Maps API", "GDAL", "Esri JavaScript API 4.x", "Mapbox API", "Spatial R"],
     datasets: [{
         label: 'Geo Dev',
-        data: [9,8,7,6,6,6,5,5,5,5,4],
+        data: [9,9,7,6,6,6,5,5,5,5,3],
         backgroundColor: 'rgba(5, 130, 15, 0.5)',
         borderColor: "rgb(5, 130, 15)",
         borderWidth: 1,
@@ -21,10 +21,10 @@ var geoData = {
 }
 
 var dbData = {
-    labels: ["GeoServer", "ArcGIS Server", "PostgreSQL", "ArcSDE/PostGIS", "SQL/PLSQL", "Web Servers", "Oracle", "R Regression"],
+    labels: ["ArcGIS Server", "ArcGIS Enteprise","Arc SDE", "GeoServer", "PostgreSQL", "SQL/PLSQL", "Web Servers", "Oracle"],
     datasets: [{
         label: 'Map Servers/Analytics',
-        data: [8,8,8,8,7,7,7,6],
+        data: [9,9,9,8,8,8,7,6],
         backgroundColor: 'rgba(198, 131, 13, 0.5)',
         borderColor: "rgb(198, 131, 13)",
         borderWidth: 1,
@@ -32,10 +32,10 @@ var dbData = {
 }
 
 var gisAppData = {
-    labels: ["ArcGIS Desktop", "QGIS", "ArcGIS Pro", "ArcGIS Online", "ArcGIS Enterprise", "Esri Web AppBuilder Dev", "ArcGIS Collector", "Survey123"],
+    labels: ["ArcGIS Pro", "ArcGIS Desktop", "QGIS", "ArcGIS Online", "ArcGIS Portal", "Esri Web AppBuilder", "ArcGIS Collector", "Survey123", "Mapbox"],
     datasets: [{
         label: 'GIS Applications',
-        data: [10,9,8,8,8,8,8,8,8],
+        data: [10,10,10,9,9,8,8,8,8],
         backgroundColor: 'rgba(178, 30, 14, 0.5)',
         borderColor: "rgb(178, 30, 14)",
         borderWidth: 1,
