@@ -1,5 +1,5 @@
 var devData = {
-    labels: ["Python APIs", "JavaScript", "Source Control", ".NET C#", "React", "UI/UX Frameworks", "Angular/Typescript", "VM DevOps-Azure/AWS", "IIS", "jQuery", "IIS", "Node.js"],
+    labels: ["Python APIs", "JavaScript", "Source Control", ".NET C#", "React", "UI/UX Frameworks", "Angular/Typescript", "VM DevOps-Azure/AWS", "IIS", "jQuery", "Node.js"],
     datasets: [{
         label: 'Dev',
         data: [9,8,8,8,8,7,7,6,6,6,4],
@@ -13,7 +13,7 @@ var geoData = {
     labels: ["Pro SDK Addins", "ArcPy Python", "Open Layers", "Esri JavaScript API 3.x", "Leaflet API", "D3", "Google Maps API", "GDAL", "Esri JavaScript API 4.x", "Mapbox API", "Spatial R"],
     datasets: [{
         label: 'Geo Dev',
-        data: [9,9,7,6,6,6,5,5,5,5,3],
+        data: [9,9,7,6,6,6,5,5,5,3,3],
         backgroundColor: 'rgba(5, 130, 15, 0.5)',
         borderColor: "rgb(5, 130, 15)",
         borderWidth: 1,
@@ -32,10 +32,10 @@ var dbData = {
 }
 
 var gisAppData = {
-    labels: ["ArcGIS Pro", "ArcGIS Desktop", "QGIS", "ArcGIS Online", "ArcGIS Portal", "Esri Web AppBuilder", "ArcGIS Collector", "Survey123", "Mapbox"],
+    labels: ["ArcGIS Pro", "ArcGIS Desktop", "QGIS", "ArcGIS Online", "ArcGIS Portal", "Esri Web AppBuilder", "ArcGIS Collector", "Survey123"],
     datasets: [{
         label: 'GIS Applications',
-        data: [10,10,10,9,9,8,8,8,8],
+        data: [10,10,10,9,9,8,8,8],
         backgroundColor: 'rgba(178, 30, 14, 0.5)',
         borderColor: "rgb(178, 30, 14)",
         borderWidth: 1,
