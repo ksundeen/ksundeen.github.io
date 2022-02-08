@@ -1,225 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Women in Tech generalized survey results">
-    <meta name="author" content="Kim Sundeen">
-    <meta name="keywords" content="women, technology, meetup, groups">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./assets/images/logo.ico" />
+
+    <meta
+      name="description"
+      content="Women in Tech generalized survey results"
+    />
+    <meta name="author" content="Kim Sundeen" />
+    <meta name="keywords" content="women, technology, meetup, groups" />
     <title>Kim Sundeen</title>
-    
-    4    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-<!--    <link rel="stylesheet" href="css/stylebasic.css">-->  
-    
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    4
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <!--    <link rel="stylesheet" href="css/stylebasic.css">-->
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" /> -->
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-0.7.7.css" />
-    <link rel="stylesheet" type="text/css" href="lib/Leaflet.markercluster-master/dist/MarkerCluster.css" />
-    <link rel="stylesheet" type="text/css" href="lib/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
- 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="lib/leaflet/leaflet-0.7.7.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="lib/Leaflet.markercluster-master/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="lib/Leaflet.markercluster-master/dist/MarkerCluster.Default.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
     <!-- Google Analytics -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  
-        ga('create', 'UA-88367987-1', 'auto');
-        ga('send', 'pageview');
-      </script>
-  
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PQNGQQ');</script>
-      <!-- End Google Tag Manager -->
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-88367987-1", "auto");
+      ga("send", "pageview");
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PQNGQQ");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQNGQQ"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->  
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PQNGQQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="container">
-        
-            <!-- /top container -->
-    <div data-spy="scroll" data-target=".bs-docs-sidebar">
+      <!-- /top container -->
+      <div data-spy="scroll" data-target=".bs-docs-sidebar">
         <div class="container">
-            <article id="article-middle" role="main" style="padding-top: 50px;">
-                <div class="about container">
-                    <div class="module module-article">
-                        <!--/ row contains all cv lists -->
-                        <div class="row">
-                            <!--Nav Bar Sidebar-->
-                            <nav class="col-xs-3 bs-docs-sidebar hidden-xs hidden-sm" id="scroll_navBar" role="navigation">
-                                <!-- <ul id="sidebar" class="nav nav-stacked fixed">	-->
-                                <ul class="nav nav-list affix" id="sidebar">
-                                    <li><a href="#whoyouare">Who You Are</a>
-                                    </li>
-                                    <li><a href="#topics">Topics for Meetings</a>
-                                    </li>
-                                    <li><a href="#timelocations">Time &amp; Locations</a>
-                                    </li>
-                                    <li><a href="#childcare">Childcare Options</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="row col-md-9" style="padding-top: 10px;">
-                                <div class=".col-md-8">
-                                    <section id="overview">
-                                        <div class="page-header">
-                                            <h1>Survey Results: Women in Tech (WiT) |<small> generalized responses (April 2018)</small></h1>
-                                            <p><strong>WiT's Mission:</strong> To inspire and engage more women in all ages and career stages in topics of professional development related to technology. More specifically, we aim to 1) network with fellow women in technology fields, 2) provide a supportive environment for learning, creativity, mentorship, and professional development, and 3) discuss new initiatives, jobs, and ideas for how to retain our talent locally.</p>
-                                            <p><i>**The survey are still open, but survey administrator reviews all responses to generalize them prior to publishing in this results webpage.</i></p>
-                                        </div>
-                                    </section>                                    
-                                    
-           <!--=============================== Who You Are =======================================-->
-                                    
-                                    <section id="whoyouare">
-                                        <hr>
-                                        <h1>Who You Are</h1>
-                                        <hr />
-
-                                        <h3>Do you want to be more involved in discussions and a local group of women in science, technology, engineering, and math (STEM) fields?</h3>
-                                        <iframe width="443.011" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=24096478&amp;format=interactive"></iframe>
-                                        <br>
-                                        <h3>In what field do you work?</h3>
-                                        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=494534861&amp;format=interactive"></iframe>
-                                        <br>
-                                        <h3>What stage are you in your career?</h3>
-                                        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1325361860&amp;format=interactive"></iframe>
-                                        <br>
-                                        <hr />
-                                        <div class="row">                                       
-                                            <h2>Where We Are: Women in Tech (WiT)</h2>
-                                                <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=828935633&amp;format=interactive"></iframe>
-
-                                                <!--------- Leaflet cluster map ----------->
-                                                <br />
-                                            
-                                            <i>A cluster map showing where we all live. </i>
-                                            <!-- example cluster map from https://asmaloney.com/2015/06/code/clustering-markers-on-leaflet-maps/ -->
-                                            <div id="map" style="width: 600px; height: 475px; border: 1px solid #AAA;"></div> 
-                                            </div>
-                                            <!----------- end cluster map ------------->
-                                        <hr />
-
-                                        <br>
-                                        <h3>In what other professional groups/societies/meetups are you actively involved?</h3>
-                                        <iframe width="809.5" height="480.13583333333327" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=519983853&amp;format=interactive"></iframe>
-                                        <br>                                            
-   
-                                    </section>
-                                    
-                                    <br>
-                                    <p class="pull-right"><a href="#top">Back to top</a>
-                                    </p>   
-                                    <br>   
-                                    
-                                    
-          <!--================================ Topics ===========================================-->
-                                    <section id="topics">
-                                        <hr />        
-                                        <h1>Meeting Topics</h1>
-                                        <hr />
-                                        <h3>What topics interest you to have meetings through the year on?</h3>
-                                        <iframe width="1181" height="715.9975" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1714817541&amp;format=interactive"></iframe>
-
-                                        <br>                                        
-
-                                    </section>
-                                    <br>
-                                    <p class="pull-right"><a href="#top">Back to top</a>
-                                    </p>
-                                    
-                                    
-          <!--================================ Time & Locations ================================-->
-                                    <section id="timelocations">
-                                        <hr />
-                                        <h1>Deciding When and Where to Meet</h1>
-                                        <hr />
-                                        
-                                        <h3>Where would you like to meet?</h3>
-                                        <iframe width="801.3477088948787" height="495.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=664616046&amp;format=interactive"></iframe>
-
-                                        <br>
-                                        <h3>How long would you like meetings to be?</h3>
-                                        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1810007172&amp;format=interactive"></iframe>
-
-                                        <h3>How often would you like to have a meeting?</h3>
-                                        <iframe width="516.5" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1747175123&amp;format=interactive"></iframe>
-
-                                        <br>
-
-                                        <h3>What day(s) do you prefer to meet? (check all that apply)</h3>
-                                        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=451991238&amp;format=interactive"></iframe>
-
-                                        <br>
-                                        <h3>What time(s) do you prefer to meet? (check all that apply)</h3>
-                                        <iframe width="756.5" height="547.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=73449433&amp;format=interactive"></iframe>
-                                        <br>                                        
-
-                                    </section>
-                                    <br>                                    
-                                    <p class="pull-right"><a href="#top">Back to top</a>
-                                    </p>
-           <!--=================================== Childcare Options ===========================-->
-                                    <section id="childcare">
-                                        <hr />
-                                        <h1>Childcare Options</h1>
-                                        <hr />
-
-                                        <h3>How many children do you have?</h3>
-                                        <iframe width="650" height="210" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubhtml?gid=1364033287&amp;single=true&amp;widget=true&amp;headers=false"></iframe>                                        
-                                        <br>
-                                        <h3>Are you interested in childcare options to help attend these meetings?</h3>
-                                        <iframe width="685" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=728612959&amp;format=interactive"></iframe>
-
-                                        <br>
-                                        <h3>If you want childcare during these meetings, where would you prefer to have your children watched?</h3>
-                                        <iframe width="685" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=728612959&amp;format=interactive"></iframe>
-                                        <br>
-                                        <h3>Would you consider contributing money to childcare if more women make use of this option?</h3>
-                                        <iframe width="532.5" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1501116076&amp;format=interactive"></iframe>                                       
-                                    </section>
-                                    <br>                                            
-                                        <p class="pull-right"><a href="#top">Back to top</a>
-                                        </p>                                      
-                                </div>
-                            </div>
-                            <!--content-->
+          <article id="article-middle" role="main" style="padding-top: 50px">
+            <div class="about container">
+              <div class="module module-article">
+                <!--/ row contains all cv lists -->
+                <div class="row">
+                  <!--Nav Bar Sidebar-->
+                  <nav
+                    class="col-xs-3 bs-docs-sidebar hidden-xs hidden-sm"
+                    id="scroll_navBar"
+                    role="navigation"
+                  >
+                    <!-- <ul id="sidebar" class="nav nav-stacked fixed">	-->
+                    <ul class="nav nav-list affix" id="sidebar">
+                      <li><a href="#whoyouare">Who You Are</a></li>
+                      <li><a href="#topics">Topics for Meetings</a></li>
+                      <li><a href="#timelocations">Time &amp; Locations</a></li>
+                      <li><a href="#childcare">Childcare Options</a></li>
+                    </ul>
+                  </nav>
+                  <div class="row col-md-9" style="padding-top: 10px">
+                    <div class=".col-md-8">
+                      <section id="overview">
+                        <div class="page-header">
+                          <h1>
+                            Survey Results: Women in Tech (WiT) |<small>
+                              generalized responses (April 2018)</small
+                            >
+                          </h1>
+                          <p>
+                            <strong>WiT's Mission:</strong> To inspire and
+                            engage more women in all ages and career stages in
+                            topics of professional development related to
+                            technology. More specifically, we aim to 1) network
+                            with fellow women in technology fields, 2) provide a
+                            supportive environment for learning, creativity,
+                            mentorship, and professional development, and 3)
+                            discuss new initiatives, jobs, and ideas for how to
+                            retain our talent locally.
+                          </p>
+                          <p>
+                            <i
+                              >**The survey are still open, but survey
+                              administrator reviews all responses to generalize
+                              them prior to publishing in this results
+                              webpage.</i
+                            >
+                          </p>
                         </div>
-                        <!-- row -->
+                      </section>
+
+                      <!--=============================== Who You Are =======================================-->
+
+                      <section id="whoyouare">
+                        <hr />
+                        <h1>Who You Are</h1>
+                        <hr />
+
+                        <h3>
+                          Do you want to be more involved in discussions and a
+                          local group of women in science, technology,
+                          engineering, and math (STEM) fields?
+                        </h3>
+                        <iframe
+                          width="443.011"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=24096478&amp;format=interactive"
+                        ></iframe>
+                        <br />
+                        <h3>In what field do you work?</h3>
+                        <iframe
+                          width="600"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=494534861&amp;format=interactive"
+                        ></iframe>
+                        <br />
+                        <h3>What stage are you in your career?</h3>
+                        <iframe
+                          width="600"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1325361860&amp;format=interactive"
+                        ></iframe>
+                        <br />
+                        <hr />
+                        <div class="row">
+                          <h2>Where We Are: Women in Tech (WiT)</h2>
+                          <iframe
+                            width="600"
+                            height="371"
+                            seamless
+                            frameborder="0"
+                            scrolling="no"
+                            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=828935633&amp;format=interactive"
+                          ></iframe>
+
+                          <!--------- Leaflet cluster map ----------->
+                          <br />
+
+                          <i>A cluster map showing where we all live. </i>
+                          <!-- example cluster map from https://asmaloney.com/2015/06/code/clustering-markers-on-leaflet-maps/ -->
+                          <div
+                            id="map"
+                            style="
+                              width: 600px;
+                              height: 475px;
+                              border: 1px solid #aaa;
+                            "
+                          ></div>
+                        </div>
+                        <!----------- end cluster map ------------->
+                        <hr />
+
+                        <br />
+                        <h3>
+                          In what other professional groups/societies/meetups
+                          are you actively involved?
+                        </h3>
+                        <iframe
+                          width="809.5"
+                          height="480.13583333333327"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=519983853&amp;format=interactive"
+                        ></iframe>
+                        <br />
+                      </section>
+
+                      <br />
+                      <p class="pull-right"><a href="#top">Back to top</a></p>
+                      <br />
+
+                      <!--================================ Topics ===========================================-->
+                      <section id="topics">
+                        <hr />
+                        <h1>Meeting Topics</h1>
+                        <hr />
+                        <h3>
+                          What topics interest you to have meetings through the
+                          year on?
+                        </h3>
+                        <iframe
+                          width="1181"
+                          height="715.9975"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1714817541&amp;format=interactive"
+                        ></iframe>
+
+                        <br />
+                      </section>
+                      <br />
+                      <p class="pull-right"><a href="#top">Back to top</a></p>
+
+                      <!--================================ Time & Locations ================================-->
+                      <section id="timelocations">
+                        <hr />
+                        <h1>Deciding When and Where to Meet</h1>
+                        <hr />
+
+                        <h3>Where would you like to meet?</h3>
+                        <iframe
+                          width="801.3477088948787"
+                          height="495.5"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=664616046&amp;format=interactive"
+                        ></iframe>
+
+                        <br />
+                        <h3>How long would you like meetings to be?</h3>
+                        <iframe
+                          width="600"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1810007172&amp;format=interactive"
+                        ></iframe>
+
+                        <h3>How often would you like to have a meeting?</h3>
+                        <iframe
+                          width="516.5"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1747175123&amp;format=interactive"
+                        ></iframe>
+
+                        <br />
+
+                        <h3>
+                          What day(s) do you prefer to meet? (check all that
+                          apply)
+                        </h3>
+                        <iframe
+                          width="600"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=451991238&amp;format=interactive"
+                        ></iframe>
+
+                        <br />
+                        <h3>
+                          What time(s) do you prefer to meet? (check all that
+                          apply)
+                        </h3>
+                        <iframe
+                          width="756.5"
+                          height="547.5"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=73449433&amp;format=interactive"
+                        ></iframe>
+                        <br />
+                      </section>
+                      <br />
+                      <p class="pull-right"><a href="#top">Back to top</a></p>
+                      <!--=================================== Childcare Options ===========================-->
+                      <section id="childcare">
+                        <hr />
+                        <h1>Childcare Options</h1>
+                        <hr />
+
+                        <h3>How many children do you have?</h3>
+                        <iframe
+                          width="650"
+                          height="210"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubhtml?gid=1364033287&amp;single=true&amp;widget=true&amp;headers=false"
+                        ></iframe>
+                        <br />
+                        <h3>
+                          Are you interested in childcare options to help attend
+                          these meetings?
+                        </h3>
+                        <iframe
+                          width="685"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=728612959&amp;format=interactive"
+                        ></iframe>
+
+                        <br />
+                        <h3>
+                          If you want childcare during these meetings, where
+                          would you prefer to have your children watched?
+                        </h3>
+                        <iframe
+                          width="685"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=728612959&amp;format=interactive"
+                        ></iframe>
+                        <br />
+                        <h3>
+                          Would you consider contributing money to childcare if
+                          more women make use of this option?
+                        </h3>
+                        <iframe
+                          width="532.5"
+                          height="371"
+                          seamless
+                          frameborder="0"
+                          scrolling="no"
+                          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS10ORj_2BdR27-M-nMps1JAmLQYNitBMQdrffEjTtTKcUB2-uuZdl19LmWfzmcCSFimKp46nQNiJA7/pubchart?oid=1501116076&amp;format=interactive"
+                        ></iframe>
+                      </section>
+                      <br />
+                      <p class="pull-right"><a href="#top">Back to top</a></p>
                     </div>
-                    <!--module-->
+                  </div>
+                  <!--content-->
                 </div>
-                <!--container-->
-            </article>
+                <!-- row -->
+              </div>
+              <!--module-->
+            </div>
+            <!--container-->
+          </article>
         </div>
         <!-- bottom container -->
+      </div>
     </div>
+  </body>
 
-    </div>
+  <!-- load external js -->
+  <!--    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>-->
+  <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
 
-</body>
-    
-<!-- load external js -->
-<!--    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>-->
-    <script type='text/javascript' src='lib/jquery-2.1.4.min.js'></script>
-    
-<!--    <script type='text/javascript' src='https://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>-->
-    <script type='text/javascript' src='lib/leaflet/leaflet-0.7.7.js'></script>    
-<!--    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>   -->
-    <script type='text/javascript' src='lib/Leaflet.markercluster-master/src/leaflet.markercluster-0.4.0.js'></script>    
-    
-    // WiT locations for leaflet map
-    <script type='text/javascript' src='data/witlocations_20180408.js'></script> 
-    <script type='text/javascript' src='js/clustermap.js'></script>    
+  <!--    <script type='text/javascript' src='https://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>-->
+  <script type="text/javascript" src="lib/leaflet/leaflet-0.7.7.js"></script>
+  <!--    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>   -->
+  <script
+    type="text/javascript"
+    src="lib/Leaflet.markercluster-master/src/leaflet.markercluster-0.4.0.js"
+  ></script>
+
+  // WiT locations for leaflet map
+  <script type="text/javascript" src="data/witlocations_20180408.js"></script>
+  <script type="text/javascript" src="js/clustermap.js"></script>
 </html>
