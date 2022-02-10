@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../logo.png" />
 
-	<title>Adding Point to 2D MapView</title>
+	<title>Lat/Lon in a 2D MapView</title>
 
 	<link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
 	<script src="https://js.arcgis.com/4.9/"></script>
@@ -72,23 +72,23 @@
 					location: evt.mapPoint,
 					content: "Latitude: "+ lat + " " + "Longitude: "+ long
 				});
+				var point = evt.mapPoint;
+				var markerSymbol = new SimpleMarkerSymbol({
+					size: 18,
+					color: [184, 4, 84],
+					outline: {
+						color: [219, 219, 219],
+						width: 3
+					}
+				});
+				var graphic = new Graphic({
+					geometry: point,
+					symbol: markerSymbol
+				});
+				mapView.graphics.add(graphic);
 			});	
 
 				
-				// var point = evt.mapPoint;
-				// var markerSymbol = new SimpleMarkerSymbol({
-				// 	size: 18,
-				// 	color: [184, 4, 84],
-				// 	outline: {
-				// 		color: [219, 219, 219],
-				// 		width: 3
-				// 	}
-				// });
-				// var graphic = new Graphic({
-				// 	geometry: point,
-				// 	symbol: markerSymbol
-				// });
-				// mapView.graphics.add(graphic);
 
 		});
 	</script>
@@ -96,8 +96,8 @@
 </head>
 
 	<body>
-		<h1 id="panel">2D Demo: Adding a Point to a MapView</h1>
+		<h1 id="panel">2D Demo: Viewing Latitude/Longitude on a Click</h1>
 		<div id="mapview"></div> 
-		<div id="instruction">Click any location on the map to see its street address</div>
+		<div id="instruction">Click any location on the map to see its latitude & longitude.</div>
   	</body>
 </html> 
