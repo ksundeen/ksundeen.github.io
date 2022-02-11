@@ -45,11 +45,11 @@
 				"year": 1986,
 				"name": "Mauston Home",
 				"folders": "",
-				"description": "na",
+				"description": "Our hometown and house growing up. Glad it's staying in the family!",
 				"img_srcs": [
 					{
 						"id": 1,
-						"alt": "Eric and Tiff",
+						"alt": "Mom and Tiff.",
 						"pic": "./HistoricPhotos/Mauston/Mom-Tiff-1986.jpeg"
 					}
 				],
@@ -73,14 +73,19 @@
 			"properties": {
 				"id": 2,
 				"year": 1987,
-				"name": "1987 - Olympia WA vacation coast",
+				"name": "1987 - Olympic National Park, WA at Pacific Ocean",
 				"folders": "",
-				"description": "Photos said Olympia, WA, but the picture is of the ocean.",
+				"description": "1987 - Playing in the Pacific Ocean near Olympic National Park, WA.",
 				"img_srcs": [
 					{
 						"id": 1,
-						"alt": "Eric and Tiff",
-						"pic": "./HistoricPhotos/Vacations/OlympicWA-Nana-Family-1987.jpeg"
+						"alt": "Playing in Pacific Ocean.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/OlympicWA-Nana-Family-1987.jpeg"
+					},
+					{
+						"id": 2,
+						"alt": "Playing near Pacific Ocean",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/OlympicWA-WholeFamily-1987.jpeg"
 					}
 				],
 				"altitude": -35.20825083827365,
@@ -321,7 +326,12 @@
 						"id": 6,
 						"alt": "Mesa Verde rock formations in sediment.",
 						"pic": "./HistoricPhotos/Vacations/MesaVerde-Durango-1993/MesaVerde-RockFormations-1993.jpeg"
-					}
+					},
+					{
+						"id": 7,
+						"alt": "Toy unicorns in the van.",
+						"pic": "./HistoricPhotos/Vacations/MesaVerde-Durango-1993/TravelingUnicorns-1992.jpeg"
+					}					
 				],
 				"altitude": 2272.192210980993,
 				"alt_mode": "absolute",
@@ -452,15 +462,25 @@
 			"type": "Feature",
 			"properties": {
 				"id": 13,
-				"year": 1995,
-				"name": "1995 - Plymouth Rock - Mayflower",
+				"year": 1992,
+				"name": "1992 - Plymouth Rock - Mayflower",
 				"folders": "",
-				"description": "1995 Trip out east.",
+				"description": "1992 Trip out east.",
 				"img_srcs": [
 					{
 						"id": 1,
 						"alt": "Mayflower ship.",
-						"pic": "./HistoricPhotos/Vacations/Mayflower-1992.jpeg"
+						"pic": "./HistoricPhotos/Vacations/NewEngland-Mayflower-1992/Mayflower-1992.jpeg"
+					},
+					{
+						"id": 2,
+						"alt": "On deck of Mayflower ship.",
+						"pic": "./HistoricPhotos/Vacations/NewEngland-Mayflower-1992/OnMayflowerDeck-1992.jpeg"
+					},
+					{
+						"id": 3,
+						"alt": "View of USS Constitution ship.",
+						"pic": "./HistoricPhotos/Vacations/NewEngland-Mayflower-1992/USSConstitutionShip-1992.jpeg"
 					}
 				],
 				"altitude": 2.710020922994817,
@@ -624,6 +644,161 @@
 				"coordinates": [
 					-91.874,
 					50.101,
+					0.0
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 17,
+				"year": 1992,
+				"name": "1992 - Plymouth 17th Century Village",
+				"folders": "",
+				"description": "1992 Trip out east to visit a 17th Century pilgrim village - (Plimoth Patuxet Museum).",
+				"img_srcs": [
+					{
+						"id": 1,
+						"alt": "17th century Plymouth pilgrim village.",
+						"pic": "./HistoricPhotos/Vacations/NewEngland-Mayflower-1992/Plymouth17thCenturyVillage-1992.jpeg"
+					}
+				],
+				"altitude": 2.710020922994817,
+				"alt_mode": "absolute",
+				"time_begin": "",
+				"time_end": "",
+				"time_when": ""
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-70.062,
+					42.198,
+					0.0
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 18,
+				"year": 1987,
+				"name": "1987 - Badlands National Park",
+				"folders": "",
+				"description": "Eric and Tiff walking at the overlook.",
+				"img_srcs": [
+					{
+						"id": 1,
+						"alt": "Badlands overlook.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/Badlands-Tiff-Eric-1987.jpeg"
+					}
+				],
+				"altitude": 2.710020922994817,
+				"alt_mode": "absolute",
+				"time_begin": "",
+				"time_end": "",
+				"time_when": ""
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-96.7009,
+					45.214,
+					0.0
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 1987,
+				"year": 1987,
+				"name": "1987 - Mt St. Helens View",
+				"folders": "",
+				"description": "A look at the landslides after the major 1980 eruption and continued eruptions.",
+				"img_srcs": [
+					{
+						"id": 1,
+						"alt": "Mt St. Helens mountain view.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/MtStHelensView-1987.jpeg"
+					},
+					{
+						"id": 2,
+						"alt": "Mt St. Helens geyser steam.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/MtStHelens-Geyser-1987.jpeg"
+					},
+					{
+						"id": 3,
+						"alt": "Mt St. Helens landlside.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/MtStHelensLandslide-1987.jpeg"
+					}
+				],
+				"altitude": 2.710020922994817,
+				"alt_mode": "absolute",
+				"time_begin": "",
+				"time_end": "",
+				"time_when": ""
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.2196,
+					46.277,
+					0.0
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 1987,
+				"year": 1987,
+				"name": "1987 - Olympic National Park, WA",
+				"folders": "",
+				"description": "A fun exploration through the Redwoods and trails in Olympic National Park, WA.",
+				"img_srcs": [
+					{
+						"id": 1,
+						"alt": "Happy family photo.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/HappyFamily-Yellowstone-1987.jpeg"
+					},
+					{
+						"id": 2,
+						"alt": "Mt St. Helens geyser steam.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/KidsInVan-Yellowstone-1987.jpeg"
+					},
+					{
+						"id": 3,
+						"alt": "Mt St. Helens geyser steam.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/Kids-Redwoods-1987.jpeg"
+					},
+					{
+						"id": 4,
+						"alt": "Tiff on Olympicpimc National Park trail.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/TiffOnTrails-Olympic-1987.jpeg"
+					},
+					{
+						"id": 5,
+						"alt": "Large elk resting in Olypmpic National Park.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/ElkResting-Olympic-1987.jpeg"
+					},
+					{
+						"id": 6,
+						"alt": "Picture of Large redwoods in Olypmic National Park.",
+						"pic": "./HistoricPhotos/Vacations/Yellowstone-WA-1987/Redwoods-Olympic-1987.jpeg"
+					}
+				],
+				"altitude": 2.710020922994817,
+				"alt_mode": "absolute",
+				"time_begin": "",
+				"time_end": "",
+				"time_when": ""
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-123.546,
+					47.649,
 					0.0
 				]
 			}
