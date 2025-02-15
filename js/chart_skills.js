@@ -1,50 +1,79 @@
-var devData = {
-    labels: ["Python APIs", "JavaScript", "Source Control", ".NET C#", "React", "UI/UX Frameworks", "Angular/Typescript", "VM DevOps-Azure/AWS", "IIS", "jQuery", "Node.js"],
+const devData = {
+    labels: ["Python APIs", "JavaScript", "Git", "UI/UX Frameworks", "Node.js","Angular/Typescript","React/Typescript", "VM DevOps-Azure/AWS", ".NET C# APIs"],
     datasets: [{
         label: 'Dev',
-        data: [9,8,8,8,8,7,7,6,6,6,4],
-        backgroundColor: 'rgba(66, 134, 244, 0.5)',
-        borderColor: "rgb(66, 134, 244)",
-        borderWidth: 1,
-    }]
-}
-
-var geoData = {
-    labels: ["Pro SDK Addins", "ArcPy Python", "Open Layers", "Esri JavaScript API 3.x", "Leaflet API", "D3", "Google Maps API", "GDAL", "Esri JavaScript API 4.x", "Mapbox API", "Spatial R"],
-    datasets: [{
-        label: 'Geo Dev',
-        data: [9,9,7,6,6,6,5,5,5,3,3],
-        backgroundColor: 'rgba(5, 130, 15, 0.5)',
-        borderColor: "rgb(5, 130, 15)",
-        borderWidth: 1,
-    }]
-}
-
-var dbData = {
-    labels: ["ArcGIS Server", "ArcGIS Enteprise","Arc SDE", "GeoServer", "PostgreSQL", "SQL/PLSQL", "Web Servers", "Oracle"],
-    datasets: [{
-        label: 'Map Servers/Analytics',
-        data: [9,9,9,8,8,8,7,6],
-        backgroundColor: 'rgba(198, 131, 13, 0.5)',
-        borderColor: "rgb(198, 131, 13)",
-        borderWidth: 1,
-    }]
-}
-
-var gisAppData = {
-    labels: ["ArcGIS Pro", "ArcGIS Desktop", "QGIS", "ArcGIS Online", "ArcGIS Portal", "Esri Web AppBuilder", "ArcGIS Collector", "Survey123"],
-    datasets: [{
-        label: 'GIS Applications',
-        data: [10,10,10,9,9,8,8,8],
+        data: [15,15,12,8,8,8,8,8,5],
         backgroundColor: 'rgba(178, 30, 14, 0.5)',
         borderColor: "rgb(178, 30, 14)",
         borderWidth: 1,
     }]
 }
 
-var chartDivs = {"devChart": devData, "geoDevChart": geoData, "dbChart": dbData, "gisAppsChart": gisAppData};
+const cloudData = {
+    labels: ["Azure VM Lab Services","DevOps", "Security Best Practices", "Cloud Architecture/Design", "Containerization", "AWS CodeBuild", "AWS CloudWatch", "AWS ECR", "Infrastructure as Code"],
+    datasets: [{
+        label: 'Cloud Platforms',
+        data: [7,6,5,3,3,3,3,3,3],
+        backgroundColor: 'rgba(198, 131, 13, 0.5)',
+        borderColor: "rgb(198, 131, 13)",
+        borderWidth: 1,
+    }]
+}
 
-var chartOptions = {		
+const geoData = {
+    labels: ["Esri JavaScript API 3.x/4.x", "GDAL", "POSTGIS", "GEOS", "ArcPy/arcgis Python", "Leaflet", "Pro SDK Addins", "Open Layers", "D3", "Google Maps API", "Spatial R"],
+    datasets: [{
+        label: 'Geo Dev',
+        data: [10,10,10,9,9,7,6,6,6,5,3],
+        backgroundColor: 'rgba(5, 130, 15, 0.5)',
+        borderColor: "rgb(5, 130, 15)",
+        borderWidth: 1,
+    }]
+}
+
+const dbData = {
+    labels: ["ArcGIS Server", "ArcGIS Enteprise", "ArcSDE", "GeoServer", "PostgreSQL", "MS SQL Server", "SQL/PLSQL", "Web Servers", "Oracle"],
+    datasets: [{
+        label: 'Map Servers/Databases',
+        data: [9,9,9,8,8,8,7,6,5],
+        backgroundColor: 'rgba(66, 134, 244, 0.5)',
+        borderColor: "rgb(66, 134, 244)",
+        borderWidth: 1,
+    }]
+}
+
+const gisAppData = {
+    labels: ["ArcGIS Pro", "QGIS", "ArcGIS Desktop", "ArcGIS Online", "ArcGIS Portal", "Esri Experience Builder", "Survey123", "Esri Web AppBuilder"],
+    datasets: [{
+        label: 'GIS Applications',
+        data: [10,10,10,9,9,8,8,8],
+        backgroundColor: 'rgba(48, 213, 200, 0.5)',
+        borderColor: "rgb(48, 213, 200)",
+        borderWidth: 1,
+    }]
+}
+
+const softSkillsData = {
+    labels: ["Time Management", "Presentations", "Technical/Scientific Writing", "Data/Business Analytics", "Workshops", "Project Management", "Agile", "Personnel Management"],
+    datasets: [{
+        label: 'Soft Skills',
+        data: [20,15,15,10,8,7,7,2],
+        backgroundColor: 'rgba(	153, 51, 153, 0.5)',
+        borderColor: "rgb(	153, 51, 153)",
+        borderWidth: 1,
+    }]
+}
+
+const chartDivs = {
+    "devChart": devData, 
+    "cloudChart": cloudData, 
+    "geoDevChart": geoData, 
+    "dbChart": dbData, 
+    "gisAppsChart": gisAppData, 
+    "softSkillsChart": softSkillsData
+};
+
+const chartOptions = {		
     scales: {
         xAxes: [{
             ticks: {
@@ -64,12 +93,11 @@ var chartOptions = {
     }
 }
 
-// var ctx = document.getElementById("devChart").getContext('2d');
 const keys = Object.keys(chartDivs);
 
 keys.forEach(item => {    
-    var ctx = document.getElementById(item).getContext('2d');
-    var aboutChart = new Chart(ctx, {
+    const ctx = document.getElementById(item).getContext('2d');
+    const aboutChart = new Chart(ctx, {
         type: 'horizontalBar',
         data: chartDivs[item],
         options: chartOptions

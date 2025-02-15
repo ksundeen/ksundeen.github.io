@@ -121,3 +121,9 @@ h2 {
     text-align: center;
     align-content: center;
 }
+.chart-container{
+	margin: 5px;
+	height: auto;
+    width: 300px;
+	margin-bottom: 10vh;
+}
